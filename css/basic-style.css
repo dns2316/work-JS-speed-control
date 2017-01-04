@@ -2,7 +2,7 @@
 Simple Responsive Template v 1.2
 
 
-primary styles 
+primary styles
    Author: www.prowebdesign.ro
    Add your own styles to customize the project.
 
@@ -16,18 +16,18 @@ BASE (MOBILE) SIZE
 /* typography */
 body{
 	color:#666;
-	font-family:'Ubuntu', Arial, Helvetica, sans-serif; 
+	font-family:'Ubuntu', Arial, Helvetica, sans-serif;
 	font-size:1em;
-	line-height:1.4em; 
+	line-height:1.4em;
 	font-weight:normal;
 }
 h1, h2, h3, h4, h5, h6{
 	font-weight:normal;
-	font-family:'Droid Serif', Arial, Helvetica, sans-serif; 
+	font-family:'Droid Serif', Arial, Helvetica, sans-serif;
 	line-height:1.5em;
 	margin:.45em 0;
 	padding:0;
-} 
+}
 
 
 /* links */
@@ -42,19 +42,19 @@ a:hover{ text-decoration:none;}
 *{	box-sizing:border-box;
 	-moz-box-sizing:border-box; margin:0px; padding:0px;}
 
-  
-/* structure */   
+
+/* structure */
 .wrapper{
-	width: 92%; 
+	width: 92%;
 	margin: 0 auto;
 }
-header{ 
+header{
 	padding:15px 0;
 }
-#banner{ 
+#banner{
 	text-align:center;
 }
-	
+
 #hero,
 #page-header{
 	background:#f3f3f3;
@@ -62,7 +62,7 @@ header{
 	border-bottom:1px solid #e2e2e2;
 	padding:20px 0;
 }
-#hero h1{ 
+#hero h1{
 	line-height:1.2em;
 	margin-top:0px;
 	margin-bottom:10px;}
@@ -71,11 +71,11 @@ header{
 	display:none;
 }
 
-#content {  
+#content {
 	margin:0px 0;
 }
 
-aside { 
+aside {
 	margin:40px 0;
 }
 
@@ -102,7 +102,7 @@ img{ max-width:100%; height:auto;}
 }
 .srt-menu{
 	display:none;
-}	
+}
 .srt-menu.toggled-on{
 	display:block;
 	position:relative;
@@ -112,12 +112,12 @@ img{ max-width:100%; height:auto;}
 .srt-menu{
 	clear:both;
 	margin-bottom:60px;
-	
+
 }
 .srt-menu li a {
 	background:#dadada;
 	display:block;
-	margin:1px 0; 
+	margin:1px 0;
 	padding:10px;
 	text-decoration:none;
 }
@@ -142,10 +142,10 @@ img{ max-width:100%; height:auto;}
 	margin:0;
 	padding:0;
 }
-#secondary-navigation ul li a{ 
+#secondary-navigation ul li a{
 	background:#E6E6E6;
 	display:block;
-	margin:5px 0; 
+	margin:5px 0;
 	padding:10px;
 	text-decoration:none;
 }
@@ -177,7 +177,7 @@ img{ max-width:100%; height:auto;}
 }
 
 /*FOOTER*/
-footer{  
+footer{
 	clear:both;
 	font-size:80%;
 	padding:20px 0;
@@ -192,28 +192,28 @@ body{
 	background:#fff;
 }
 h1, h2, h3, h4, h5, h6{
-	color:#333; 
+	color:#333;
 }
 
-footer{ 
+footer{
 	background:#333;
 	color:#ccc;
 }
-footer h1, footer h2, footer h3, footer h4{ 
-	color:#CCC; 
+footer h1, footer h2, footer h3, footer h4{
+	color:#CCC;
 	margin-bottom:10px;
 }
 footer ul{
 	margin:0 0 0 8%;
 }
 
-a.buttonlink{ 
-	background:#0099ff; 
-	border-radius:7px; 
+a.buttonlink{
+	background:#0099ff;
+	border-radius:7px;
 	color:#fff;
 	display:block;
-	float:left; 
-	margin:10px 15px 10px 0; 
+	float:left;
+	margin:10px 15px 10px 0;
 	padding:10px;
 	text-decoration:none;
 }
@@ -248,7 +248,7 @@ a.buttonlink:hover{
 }
 
 
-/* Contain floats*/ 
+/* Contain floats*/
 .clearfix:before,
 .clearfix:after,
 .row:before,
@@ -310,7 +310,7 @@ This is for mobile devices with a bit larger screens.
 .long img{width:100% !important;}
 /*....................#columnsdemo .grid_6 img{width:30% !important;}................*/
 #columnsdemo .grid_6{width:50% !important;}
-} 
+}
 
 /*
 TABLET & SMALLER LAPTOPS
@@ -328,19 +328,19 @@ But I think that some more breathing space is good:)
 .grid_2{width:45% !important;}
 /*....................#columnsdemo .grid_6 img{width:30%;}................*/
 .wrapper{
-	max-width: 1140px; 
+	max-width: 1140px;
 	margin: 0 auto;
 }
 
-#banner{ 
-	float:left; 
+#banner{
+	float:left;
 	text-align:left;
 	margin-bottom:0px;
 }
 header{
 	padding:0;
 }
-#content {  
+#content {
 	float:left;
 	width:65%;
 }
@@ -351,22 +351,22 @@ header{
 
 .flexslider{
 display:block;
-/*demo 1 slider theme*/	
-margin: 0 0 60px; 
-background: #fff; 
-border: 4px solid #fff; 
--webkit-border-radius: 4px; 
--moz-border-radius: 4px; 
--o-border-radius: 4px; 
-border-radius: 4px; 
-box-shadow: 0 1px 4px rgba(0,0,0,.2); 
--webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2); 
--moz-box-shadow: 0 1px 4px rgba(0,0,0,.2); 
+/*demo 1 slider theme*/
+margin: 0 0 60px;
+background: #fff;
+border: 4px solid #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+box-shadow: 0 1px 4px rgba(0,0,0,.2);
+-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+-moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
 -o-box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 
 
-aside { 
+aside {
 	float:right;
 	width:30%;
 }
@@ -441,12 +441,12 @@ ul.srt-menu li li li.sfHover ul {
 }
 .srt-menu li a {
 	background:#fff;
-	margin:0; 
+	margin:0;
 	padding:10px 20px;
 	height:45px;
 }
 .srt-menu a, .srt-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
-	color:			#0099ff;	
+	color:			#0099ff;
 }
 .srt-menu li li a {
 		border-top:		1px solid rgba(255,255,255,.2);
@@ -464,7 +464,7 @@ ul.srt-menu li li li.sfHover ul {
 }
 
 .srt-menu li:hover > a,
-.srt-menu li.current a{ 
+.srt-menu li.current a{
 	color:#fff;
 	background:#0099ff;
 }
@@ -477,14 +477,14 @@ ul.srt-menu li li li.sfHover ul {
 
 /*GRID*/
 /*
- & Columns : 12 
+ & Columns : 12
 
  */
  .row{
 	 margin-left: -15px;
      margin-right: -15px;
 }
- 
+
 .grid_1 { width: 8.33333333%; }
 .grid_2 { width: 16.66666667%; }
 .grid_3 { width: 25%; }
@@ -517,7 +517,7 @@ ul.srt-menu li li li.sfHover ul {
 .rightfloat{float:right;}
 /* @notation inspired by tinyGrid, .row and percentage by Twitter Bootstrap
  */
- 
+
 #hero [class*="grid_"] { margin-bottom:-20px;}
 }
 
@@ -530,7 +530,7 @@ you can add resource intensive styles.
 @media only screen and (min-width: 1030px) {
 .vdvd{margin-top:0px;}
 
-} 
+}
 
 /*
 LARGE VIEWING SIZE
@@ -538,7 +538,7 @@ This is for the larger monitors and possibly full screen viewers.
 */
 @media only screen and (min-width: 1240px) {
 
-} 
+}
 
 /*
 RETINA (2x RESOLUTION DEVICES)
@@ -550,15 +550,15 @@ other displays with a 2x resolution.
        only screen and (min-device-pixel-ratio: 1.5) {
 
 
-} 
+}
 
 /*
 iPHONE 5 MEDIA QUERY
 iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
 */
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) { 
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
 
-  
+
 }
 
 /*
@@ -581,7 +581,7 @@ PRINT STYLESHEET
 
 @media (min-width: 320px) and (max-width: 340px) {
 
-#columnsdemo .grid_8 img{margin-left:0!important;} 
+#columnsdemo .grid_8 img{margin-left:0!important;}
 #main.wrapper{width:100%!important;}
 .grid_8 img{margin-left:-92px!important;}
 .wide-content .signleft{left:30%; top:-4%;}
@@ -591,11 +591,11 @@ PRINT STYLESHEET
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
 .wide-content .signright{top:7%;}
-  
+
 }
 
 
-@media (min-width: 341px) and (max-width: 360px) { 
+@media (min-width: 341px) and (max-width: 360px) {
 #columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:30%; top:-7%;}
 .wide-content .signleft1{left:40%; top:-7%;}
@@ -604,10 +604,10 @@ PRINT STYLESHEET
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
 .wide-content .signright{top:7%;}
-  
+
 }
 
-@media (min-width: 361px) and (max-width: 380px) { 
+@media (min-width: 361px) and (max-width: 380px) {
 .wide-content .signleft{left:30%; top:-3%;}
 .wide-content .signleft1{left:40%; top:-3%;}
 .wide-content .signleft2{left:49%; top:-3%;}
@@ -615,10 +615,10 @@ PRINT STYLESHEET
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
 .wide-content .signright{top:7%;}
-  
+
 }
 
-@media (min-width: 381px) and (max-width: 400px) { 
+@media (min-width: 381px) and (max-width: 400px) {
 .wide-content .signleft{left:30%; top:-1%;}
 .wide-content .signleft1{left:40%; top:-1%;}
 .wide-content .signleft2{left:49%; top:-1%;}
@@ -628,17 +628,17 @@ PRINT STYLESHEET
 
 }
 
-@media (min-width: 401px) and (max-width: 440px) { 
+@media (min-width: 401px) and (max-width: 440px) {
 .wide-content .signleft{left:30%; top:4%;}
 .wide-content .signleft1{left:40%; top:4%;}
 .wide-content .signleft2{left:49%; top:4%;}
 .wide-content .signleft3{left:58%; top:4%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
-.wide-content .signleft1 img{width:50%;}  
+.wide-content .signleft1 img{width:50%;}
 }
 
 @media (min-width: 441px) and (max-width: 470px) {
-#columnsdemo .grid_8 img{margin-left:0!important;} 
+#columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:30%; top:7%;}
 .wide-content .signleft1{left:40%; top:7%;}
 .wide-content .signleft2{left:49%; top:7%;}
@@ -649,7 +649,7 @@ PRINT STYLESHEET
 }
 
 @media (min-width: 471px) and (max-width: 500px) {
-	#columnsdemo .grid_8 img{margin-left:0!important;} 
+	#columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:30%; top:9%;}
 .wide-content .signleft1{left:40%; top:9%;}
 .wide-content .signleft2{left:49%; top:9%;}
@@ -659,7 +659,7 @@ PRINT STYLESHEET
 
 }
 
-@media (min-width: 501px) and (max-width: 550px) { 
+@media (min-width: 501px) and (max-width: 550px) {
 #columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:29%; top:13%;}
 .wide-content .signleft1{left:40%; top:13%;}
@@ -671,7 +671,7 @@ PRINT STYLESHEET
 }
 
 @media (min-width: 551px) and (max-width: 600px) {
-#columnsdemo .grid_8 img{margin-left:0!important;} 
+#columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:29%; top:17%;}
 .wide-content .signleft1{left:40%; top:17%;}
 .wide-content .signleft2{left:49%; top:17%;}
@@ -681,7 +681,7 @@ PRINT STYLESHEET
 
 }
 
-@media (min-width: 601px) and (max-width: 670px) { 
+@media (min-width: 601px) and (max-width: 670px) {
 #columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:29%; top:23%;}
 .wide-content .signleft1{left:40%; top:23%;}
@@ -693,24 +693,24 @@ PRINT STYLESHEET
 }
 
 @media (min-width: 671px) and (max-width: 760px) {
-#columnsdemo .grid_8 img{margin-left:0!important;} 
+#columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:29%; top:26%;}
 .wide-content .signleft1{left:40%; top:26%;}
 .wide-content .signleft2{left:49%; top:26%;}
 .wide-content .signleft3{left:58%; top:26%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
-.wide-content .signleft1 img{width:50%;}  
+.wide-content .signleft1 img{width:50%;}
 }
 
 @media (min-width: 761px) and (max-width: 920px) {
-#columnsdemo .grid_8 img{margin-left:0!important;}  
+#columnsdemo .grid_8 img{margin-left:0!important;}
 .wide-content .signleft{left:29%; top:28%;}
 .wide-content .signleft1{left:40%; top:28%;}
 .wide-content .signleft2{left:49%; top:28%;}
 .wide-content .signleft3{left:58%; top:28%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
-  
+
 }
 
 @media (min-width: 300px) and (max-width: 767px) {
