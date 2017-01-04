@@ -112,9 +112,9 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.ogg" type="video/ogg"><source src="videolong/home.webm" type="video/webm"><source src="videolong/home.mov" type="video/quicktime">'; // video on Hide Q
+          actualHTML = '<source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.ogg" type="video/ogg"><source src="videolong/home.webm" type="video/webm"><source src="videolong/home.mov" type="video/quicktime"><source src="videolong/home.mov" type="video/mov">'; // video on Hide Q
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.ogg" type="video/ogg"><source src="videoshort/home.webm" type="video/webm"><source src="videosshort/home.mov" type="video/quicktime">'; // video in Low Q
+          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.ogg" type="video/ogg"><source src="videoshort/home.webm" type="video/webm"><source src="videosshort/home.mov" type="video/quicktime"><source src="videosshort/home.mov" type="video/mov">'; // video in Low Q
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
@@ -176,6 +176,7 @@
           <div class="grid_12">
             <div class="vdvd">
               <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false">
+                <source src="videoshort/home.mp4" type="video/mp4">
               </video>
 
     <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
