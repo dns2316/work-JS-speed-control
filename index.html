@@ -23,7 +23,7 @@
 
   <!-- JS-->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
-
+  <script src="js/plugins.js"></script>
   <!-- end JS-->
 
 
@@ -88,6 +88,66 @@
   w3IncludeHTML();
   </script>
 
+
+
+  </head>
+
+  <body id="home">
+    <div class="se-pre-con"></div>
+    <div id="main" class="wrapper" style="box-shadow: 0px 0px 4px #CCC;">
+
+
+    <!-- content area -->
+    	<section id="content" class="wide-content">
+        <div class="row">
+          <div class="grid_12">
+            <div class="vdvd" id="erMsg">
+              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false">
+                <source src="videoshort/home.mp4" type="video/mp4">
+              </video>
+
+    <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
+         <!-- <source src="video/home.mp4" type="video/mp4" width="100%" height="auto">
+          <source src="video/home.webm" type="video/webm codecs=codecs=vp8, vorbis" width="100%" height="auto">
+          <source src="video/home.ogg" type="video/ogg codecs=theora, vorbis" width="100%" height="auto">-->
+
+          <!-- Flash fallback -->
+
+      <!-- </video>-->
+            </div>
+          </div>
+
+    	  </div><!-- end row -->
+    	</section><!-- end content area -->
+
+          <section id="columnsdemo" style="width:100%" class="clearfix">
+          <div class="grid_12"><a href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank"><img src="images/logoname.png" usemap="#logos"/></a>
+          <map name="logos">
+    			<area shape="rect" coords="30,25,162,67" href="http://www.londonscr.co.uk/index.html" title="" alt="" />
+    			<area shape="rect" coords="195,24,253,67" href="http://www.londonscr.co.uk/index.html" title="" alt="" />
+    			<area shape="rect" coords="288,16,342,70" href="http://http://www.londonscr.co.uk/index.html" title="" alt="" />
+    		</map>
+
+          </div>
+          </section>
+
+          <section id="content" class="wide-content">
+          <div class="row">
+            <div class="grid_12">
+
+    <img src="images/BottomBanner.png" usemap="#logosbottom"/>
+    <map name="logosbottom">
+    			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" title="" alt="" />
+    			<area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" title="" alt="" />
+    		</map>
+           </div>
+      </div>
+      </section>
+
+    <!-- fire ups - read this file!  -->
+    <script src="js/main.js"></script>
+  </body>
+
   <!-- =================================================================== -->
 
   <script type="text/javascript">
@@ -106,7 +166,7 @@
       }
 
       var oProgress = document.getElementById("video_player");
-      var speedForHQ = 0.91; // speed in Mbps
+      var speedForHQ = 0.80; // speed in Mbps
       if (oProgress) {
         console.log('You index download speed: ', msg[0]);
 
@@ -161,63 +221,21 @@
     }
   </script>
 
+
   <!-- =================================================================== -->
 
-  </head>
-
-  <body id="home">
-    <div class="se-pre-con"></div>
-    <div id="main" class="wrapper" style="box-shadow: 0px 0px 4px #CCC;">
-
-
-    <!-- content area -->
-    	<section id="content" class="wide-content">
-        <div class="row">
-          <div class="grid_12">
-            <div class="vdvd">
-              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false">
-                <source src="videoshort/home.mp4" type="video/mp4">
-              </video>
-
-    <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
-         <!-- <source src="video/home.mp4" type="video/mp4" width="100%" height="auto">
-          <source src="video/home.webm" type="video/webm codecs=codecs=vp8, vorbis" width="100%" height="auto">
-          <source src="video/home.ogg" type="video/ogg codecs=theora, vorbis" width="100%" height="auto">-->
-
-          <!-- Flash fallback -->
-
-      <!-- </video>-->
-            </div>
-          </div>
-
-    	  </div><!-- end row -->
-    	</section><!-- end content area -->
-
-          <section id="columnsdemo" style="width:100%" class="clearfix">
-          <div class="grid_12"><img src="images/logoname.png" usemap="#logos"/>
-          <map name="logos">
-    			<area shape="rect" coords="30,25,162,67" href="http://www.londonscr.co.uk/index.html" title="" alt="" />
-    			<area shape="rect" coords="195,24,253,67" href="http://www.londonscr.co.uk/index.html" title="" alt="" />
-    			<area shape="rect" coords="288,16,342,70" href="http://http://www.londonscr.co.uk/index.html" title="" alt="" />
-    		</map>
-
-          </div>
-          </section>
-
-          <section id="content" class="wide-content">
-          <div class="row">
-            <div class="grid_12">
-
-    <img src="images/BottomBanner.png" usemap="#logosbottom"/>
-    <map name="logosbottom">
-    			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" title="" alt="" />
-    			<area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" title="" alt="" />
-    		</map>
-           </div>
-      </div>
-      </section>
-
-    <!-- fire ups - read this file!  -->
-    <script src="js/main.js"></script>
-  </body>
+  <script>
+  var qtMsg = document.getElementById("erMsg");
+  var ua = navigator.userAgent.toLowerCase();
+  if (ua.indexOf('safari') != -1) {
+    if (ua.indexOf('chrome') > -1) {
+      console.log('You use chrome');
+    } else {
+      if (pluginlist.indexOf("QuickTime") != -1) {
+      console.log(pluginlist.indexOf("QuickTime"));
+        var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You dont have QuickTime! Click for download QuickTime!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click for download QuickTime for Windows!</a>';
+        qtMsg.innerHTML = er;
+    }
+  }
+  </script>
 </html>

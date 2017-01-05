@@ -1,20 +1,20 @@
 
 // Fireup the plugins
 $(document).ready(function(){
-	
-	// initialise  slideshow
-	 $('.flexslider').flexslider({
-        animation: "slide",
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
+
+	// initialise  slideshow !!! Uncaught TypeError: $(...).flexslider is not a function
+	//  $('.flexslider').flexslider({
+  //       animation: "slide",
+  //       start: function(slider){
+  //         $('body').removeClass('loading');
+  //       }
+  //     });
 
 });
 /**
  * Handles toggling the navigation menu for small screens.
  */
-( function() {
+( function() { // !!! Uncaught TypeError: Cannot read property 'getElementsByTagName' of null
 	var button = document.getElementById( 'topnav' ).getElementsByTagName( 'div' )[0],
 	    menu   = document.getElementById( 'topnav' ).getElementsByTagName( 'ul' )[0];
 
