@@ -174,7 +174,7 @@
         if (parseInt(msg[0]) > speedForHQ) {
           actualHTML = '<source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.ogg" type="video/ogg"><source src="videolong/home.webm" type="video/webm"><source src="videolong/home.mov" type="video/quicktime"><source src="videolong/home.mov" type="video/mov">'; // video on Hide Q
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.ogg" type="video/ogg"><source src="videoshort/home.webm" type="video/webm"><source src="videosshort/home.mov" type="video/quicktime"><source src="videosshort/home.mov" type="video/mov">'; // video in Low Q
+          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.ogg" type="video/ogg"><source src="videoshort/home.webm" type="video/webm"><source src="videoshort/home.mov" type="video/quicktime"><source src="videoshort/home.mov" type="video/mov">'; // video in Low Q
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
@@ -227,6 +227,23 @@
   <script>
   var qtMsg = document.getElementById("erMsg");
   var ua = navigator.userAgent.toLowerCase();
+  // if (ua.indexOf("iphone") != -1) {
+  //   console.log(ua.indexOf("mozilla"))
+  //   console.log(ua)
+  //
+  //   loadForIphone = `<style type="text/css">
+  //     #video_player { display: none }
+  //   </style>
+  //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
+  //   qtMsg.innerHTML = loadForIphone;
+  // }
+  if (ua.indexOf("iphone") != -1) {
+    function playVideo(){
+       var video = document.getElementById("video_player");
+       video.play();
+    }
+    playVideo();
+  }
   if (ua.indexOf('safari') != -1) {
     if (ua.indexOf('chrome') > -1) {
       console.log('You use chrome');
