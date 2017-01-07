@@ -102,7 +102,7 @@
         <div class="row">
           <div class="grid_12">
             <div class="vdvd" id="erMsg">
-              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false">
+              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline>
                 <source src="videoshort/home.mp4" type="video/mp4">
               </video>
 
@@ -172,9 +172,9 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.mp4" type="video/mp4"><source src="videolong/home.ogg" type="video/ogg"><source src="videolong/home.webm" type="video/webm"><source src="videolong/home.mov" type="video/quicktime"><source src="videolong/home.mov" type="video/mov">'; // video on Hide Q
+          actualHTML = '<source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.mp4" type="video/mp4"><source src="videoshort/home.ogg" type="video/ogg"><source src="videoshort/home.webm" type="video/webm"><source src="videoshort/home.mov" type="video/quicktime"><source src="videoshort/home.mov" type="video/mov">'; // video in Low Q
+          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
@@ -238,8 +238,13 @@
   //   qtMsg.innerHTML = loadForIphone;
   // }
   if (ua.indexOf("iphone") != -1) {
+    console.log(ua.indexOf("iphone"))
+    console.log(ua)
+
     function playVideo(){
        var video = document.getElementById("video_player");
+      //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+       webview.allowsInlineMediaPlayback = true;
        video.play();
     }
     playVideo();
