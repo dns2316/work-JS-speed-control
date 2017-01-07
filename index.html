@@ -104,6 +104,7 @@
             <div class="vdvd" id="erMsg">
               <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline>
                 <source src="videoshort/home.mp4" type="video/mp4">
+                  You cannot see the video because you browser do not support html5 video!
               </video>
 
     <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
@@ -172,9 +173,11 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
+          actualHTML = '<source src="videolong/home.mp4" type="video/H.264" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
+          actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
+          actualHTML = '<source src="videoshort/home.mp4" type="video/H.264" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
+          actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
@@ -227,6 +230,8 @@
   <script>
   var qtMsg = document.getElementById("erMsg");
   var ua = navigator.userAgent.toLowerCase();
+  console.log(ua)
+
   // if (ua.indexOf("iphone") != -1) {
   //   console.log(ua.indexOf("mozilla"))
   //   console.log(ua)
@@ -239,8 +244,6 @@
   // }
   if (ua.indexOf("iphone") != -1) {
     console.log(ua.indexOf("iphone"))
-    console.log(ua)
-
     function playVideo(){
        var video = document.getElementById("video_player");
       //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
@@ -253,13 +256,9 @@
   // console.log(pluginlist);
   // -1 - not found
   if (ua.indexOf('safari') != -1) {
-    if (ua.indexOf('chrome') > -1) {
-      console.log('You use chrome');
-    } else {
-      if (pluginlist.indexOf("QuickTime") == -1) {
-        var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You dont have QuickTime! Click for download QuickTime!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click for download QuickTime for Windows!</a>';
-        qtMsg.innerHTML = er;
-    }
+    if (pluginlist.indexOf("QuickTime") == -1) {
+      var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
+      qtMsg.innerHTML = er;
   }
 }
   </script>
