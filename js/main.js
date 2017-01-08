@@ -49,20 +49,45 @@ var btn = document.getElementById("myBtn");
 var btnAbout = document.getElementById("aboutBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
+var spanAbout = document.getElementsByClassName("close")[1];
+
+var displayTurn = true;
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
-    modal.style.display = "block";
+  if (displayTurn) {
+    modal.style.display = "block"
+    about.style.display = "none"
+    displayTurn = !displayTurn
+  } else {
+    modal.style.display = "none"
+    displayTurn = !displayTurn
+  }
+}
+
+btnAbout.onclick = function() {
+  if (displayTurn) {
+    about.style.display = "block"
+    modal.style.display = "none"
+    displayTurn = !displayTurn
+  } else {
+    about.style.display = "none"
+    displayTurn = !displayTurn
+  }
 }
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
     modal.style.display = "none";
 }
+spanAbout.onclick = function() {
+    about.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target == modal || event.target == about) {
         modal.style.display = "none";
+        about.style.display = "none";
     }
 }
