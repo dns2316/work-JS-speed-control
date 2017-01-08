@@ -24,7 +24,6 @@
   <!-- JS-->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="about.js"></script>
   <!-- end JS-->
 
 
@@ -120,20 +119,24 @@
               <div id="myModal" class="modal">
                   <div class="modal-content"><span class="close">&times;</span>
                     <form action="/js/gdform.php" method="post">
-                      <p>London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br><br></p>
+                      <p>
+                        London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br>
+                        <a href="mailto:info@LondonSCR.co.uk" style="color:#e22525;text-decoration: none;">Email: info@LondonSCR.co.uk</a>
+                      </p>
+                      <br>
                       <input type="hidden" name="subject" value="Form Submission" />
                       <!-- <input type="hidden" name="redirect" value="thankyou.html" /> -->
                       <p>First Name:<input type="text" name="FirstName" /></p>
                       <p>Last Name:<input type="text" name="LastName" /></p>
-                      <p>E-Mail:<input type="text" name="email" /></p>
-                      <p>Comments:<textarea name="comments" placeholder="Type message here." cols="40" rows="10"></textarea>
+                      <p>E-Mail:<input type="text" name="email" placeholder="email@yahoo.com"/></p>
+                      <p>Message:<textarea name="comments" placeholder="Type message here." cols="40" rows="10"></textarea>
                       <input type="submit" name="submit" value="submit"/>
                     </form>
                   </div>
               </div>
 
               <div id="aboutModal" class="modal">
-                  <div class="modal-content" id="outAbout"><span class="close">&times;</span>
+                  <div class="modal-content" id="outAbout">
 
                   </div>
               </div>
@@ -171,7 +174,6 @@
       </section>
 
     <!-- fire ups - read this file!  -->
-    <script src="js/main.js"></script>
   </body>
 
   <!-- =================================================================== -->
@@ -316,4 +318,8 @@ function fallback(video) {
     }
   }
   </script>
+
+  <script src="about.js"></script>
+  <script src="js/main.js"></script>
+
 </html>
