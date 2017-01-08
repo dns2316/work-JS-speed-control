@@ -139,9 +139,9 @@
           <section id="columnsdemo" style="width:100%" class="clearfix">
           <div class="grid_12"><a href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank"><img src="images/logoname.png" usemap="#logos"/></a>
           <map name="logos">
-    			<area shape="rect" coords="30,25,162,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" title="" alt="" />
-    			<area shape="rect" coords="195,24,253,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" title="" alt="" />
-    			<area shape="rect" coords="288,16,342,70" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" title="" alt="" />
+    			<area shape="rect" coords="30,25,162,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
+    			<area shape="rect" coords="195,24,253,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
+    			<area shape="rect" coords="288,16,342,70" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
     		</map>
 
           </div>
@@ -155,7 +155,8 @@
     <map name="logosbottom">
     			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" target="_blank" title="" alt="" />
           <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
-    			<area shape="rect" coords="805,41,1085,62" href="#" id="myBtn" title="" alt="" />
+    			<area shape="rect" coords="952,14,1117,106" href="#" id="myBtn" style="outline:none;" title="" alt="" />
+          <area shape="rect" coords="770,14,935,105" href="#" id="myBtn" style="outline:none;" title="" alt="" />
     		</map>
            </div>
       </div>
@@ -300,7 +301,7 @@ function fallback(video) {
 
 // console.log(ua.indexOf('chrome'))
   // -1 - not found
-  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('windows') !== -1) {
+  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('windows') !== -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
       qtMsg.innerHTML = er;
