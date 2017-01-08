@@ -29,6 +29,21 @@ h1, h2, h3, h4, h5, h6{
 	padding:0;
 }
 
+/* Modal Content */
+#myModal {
+	z-index: 1;
+}
+.modal-content {
+    background-color: rgba(255,255,255,0.7);
+    padding: 20px 50px;
+    width: 500px;
+		float:right;
+}
+.modal-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content p{color:#e22525; font-weight:bold; font-size:20px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+.modal-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
+.modal-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
+    letter-spacing: 1px;}
 
 /* links */
 a,
@@ -81,6 +96,18 @@ aside {
 
 p{ margin:0 0 1.5em;}
 
+.modal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		right:0px;
+}
 
 /* RESPONSIVE IMAGES */
 img{ max-width:100%; height:auto;}
@@ -310,6 +337,12 @@ This is for mobile devices with a bit larger screens.
 .long img{width:100% !important;}
 /*....................#columnsdemo .grid_6 img{width:30% !important;}................*/
 #columnsdemo .grid_6{width:50% !important;}
+.modal-content p{font-size: 6px;line-height: 8px;text-shadow: none;}
+.modal-content{width:40%; padding:5px 10px; height:100%;}
+.modal-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 6px; padding:7px 0px;}
+.modal{right:0px;}
 }
 
 /*
@@ -529,7 +562,11 @@ you can add resource intensive styles.
 */
 @media only screen and (min-width: 1030px) {
 .vdvd{margin-top:0px;}
-
+.modal-content p{font-size: 14px;line-height: 16px;text-shadow: none;}
+.modal-content{width:40%; padding:5px 10px; height:100%;}
+.modal-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 14px; padding:7px 0px;}
 }
 
 /*
@@ -667,7 +704,11 @@ PRINT STYLESHEET
 .wide-content .signleft3{left:58%; top:13%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
-
+.modal-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
+.modal-content{width:40%; padding:5px 10px; height:100%;}
+.modal-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 8px; padding:7px 0px;}
 }
 
 @media (min-width: 551px) and (max-width: 600px) {
@@ -710,6 +751,11 @@ PRINT STYLESHEET
 .wide-content .signleft3{left:58%; top:28%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
+.modal-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
+.modal-content{width:40%; padding:5px 10px; height:100%;}
+.modal-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 12px; padding:7px 0px;}
 
 }
 

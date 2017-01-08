@@ -115,6 +115,21 @@
           <!-- Flash fallback -->
 
       <!-- </video>-->
+
+              <div id="myModal" class="modal">
+                  <div class="modal-content"><span class="close">&times;</span>
+                      <p>London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br><br>
+
+                          <a href="mailto:info@LondonSCR.co.uk" style="color:#e22525;text-decoration: none;">Email: info@LondonSCR.co.uk</a><br>
+                          <input type="text" placeholder="E-mail">
+                          <br>
+                          <input type="text" placeholder="Subject">
+                          <textarea placeholder="type message here and click send"></textarea>
+                          <input type="submit" value="Send">
+                      </p>
+                  </div>
+              </div>
+
             </div>
           </div>
 
@@ -139,7 +154,8 @@
     <img src="images/BottomBanner.png" usemap="#logosbottom"/>
     <map name="logosbottom">
     			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" target="_blank" title="" alt="" />
-    			<area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" title="" alt="" />
+          <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
+    			<area shape="rect" coords="805,41,1085,62" href="#" id="myBtn" title="" alt="" />
     		</map>
            </div>
       </div>
@@ -284,7 +300,7 @@ function fallback(video) {
 
 // console.log(ua.indexOf('chrome'))
   // -1 - not found
-  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1) {
+  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('windows') !== -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
       qtMsg.innerHTML = er;
