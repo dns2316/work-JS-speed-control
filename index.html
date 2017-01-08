@@ -102,7 +102,7 @@
         <div class="row">
           <div class="grid_12">
             <div class="vdvd" id="erMsg">
-              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline>
+              <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline playsinline>
                 <source src="videoshort/home.mp4" type="video/mp4">
                   You cannot see the video because you browser do not support html5 video!
               </video>
@@ -172,11 +172,11 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<source src="videolong/home.mp4" type="video/h264" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
+          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home.mp4" type="video/h264" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg" preload="metadata"><source src="videolong/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
           // actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/h264" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
+          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home.mp4" type="video/h264" preload="metadata"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg" preload="metadata"><source src="videoshort/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
           // actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         }
@@ -275,7 +275,14 @@ function windowsPhone(data) {
     }
     playVideo();
   }
-console.log(ua.indexOf('chrome'))
+
+function fallback(video) {
+  var img = video.querySelector('img');
+  if (img)
+    video.parentNode.replaceChild(img, video);
+}
+
+// console.log(ua.indexOf('chrome'))
   // -1 - not found
   if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
