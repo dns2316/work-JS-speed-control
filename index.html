@@ -158,10 +158,10 @@
     function ShowProgressMessage(msg) {
       if (console) {
           if (typeof msg == "string") {
-              console.log(msg);
+              console.log('You index download speed: ', msg);
           } else {
               for (var i = 0; i < msg.length; i++) {
-                  console.log(msg[i]);
+                  console.log('You index download speed: ', msg[i]);
               }
           }
       }
@@ -169,15 +169,16 @@
       var oProgress = document.getElementById("video_player");
       var speedForHQ = 0.9; // speed in Mbps
       if (oProgress) {
-        console.log('You index download speed: ', msg[0]);
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<source src="videolong/home.mp4" type="video/H.264" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
-          actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = '<source src="videolong/home.mp4" type="video/h264" preload="auto"><source src="videolong/home.mp4" type="video/mp4" preload="auto"><source src="videolong/home.ogg" type="video/ogg" preload="auto"><source src="videolong/home.webm" type="video/webm" preload="auto"><source src="videolong/home.mov" type="video/quicktime" preload="auto"><source src="videolong/home.mov" type="video/mov" preload="auto">'; // video on Hide Q
+          // actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<source src="videoshort/home.mp4" type="video/H.264" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
-          actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = '<source src="videoshort/home.mp4" type="video/h264" preload="auto"><source src="videoshort/home.mp4" type="video/mp4" preload="auto"><source src="videoshort/home.ogg" type="video/ogg" preload="auto"><source src="videoshort/home.webm" type="video/webm" preload="auto"><source src="videoshort/home.mov" type="video/quicktime" preload="auto"><source src="videoshort/home.mov" type="video/mov" preload="auto">'; // video in Low Q
+          // actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = windowsPhone(actualHTML);
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
@@ -242,8 +243,30 @@
   //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
   //   qtMsg.innerHTML = loadForIphone;
   // }
-  if (ua.indexOf("iphone") != -1) {
-    console.log(ua.indexOf("iphone"))
+
+function windowsPhone(data) {
+  var iemobile;
+  if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
+   console.log('windows mobile')
+   iemobile = data + `
+    <source src="videoshort/home.mp4" type="video/mp4" />
+    <object type="application/x-shockwave-flash"
+            data="swf/flowplayer-3.2.18.swf" width="100" height="auto">
+        <param name="movie" value="swf/flowplayer-3.2.18.swf" />
+        <param name="allowFullScreen" value="true" />
+        <param name="wmode" value="transparent" />
+        <param name="flashVars"
+               value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />
+        <img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />
+    </object>`;
+  } else {
+    iemobile = data;
+  }
+  return iemobile;
+}
+
+  if (ua.indexOf("iphone") !== -1) {
+    // console.log(ua.indexOf("iphone"))
     function playVideo(){
        var video = document.getElementById("video_player");
       //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
@@ -252,14 +275,13 @@
     }
     playVideo();
   }
-
-  // console.log(pluginlist);
+console.log(ua.indexOf('chrome'))
   // -1 - not found
-  if (ua.indexOf('safari') != -1) {
+  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
       qtMsg.innerHTML = er;
+    }
   }
-}
   </script>
 </html>
