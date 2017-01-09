@@ -53,28 +53,29 @@ var btnMail = document.getElementById('btnMail');
 var span = document.getElementsByClassName("close")[0];
 var spanAbout = document.getElementsByClassName("close")[1];
 
-var displayTurn = true;
+var displayTurnBtn = true;
+var displayTurnbtnAbout = true;
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
-  if (displayTurn) {
+  if (displayTurnBtn) {
     modal.style.display = "block"
     // about.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnBtn = !displayTurnBtn
   } else {
     modal.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnBtn = !displayTurnBtn
   }
 }
 
 btnAbout.onclick = function() {
-  if (displayTurn) {
+  if (displayTurnbtnAbout) {
     about.style.display = "block"
     // modal.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnbtnAbout = !displayTurnbtnAbout
   } else {
     about.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnbtnAbout = !displayTurnbtnAbout
   }
 }
 

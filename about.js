@@ -1,4 +1,7 @@
 var main = `
+<span class="close">&times;</span> <br>
+<img src="images/About1.png" style="width: 35%; height:auto;" /><img src="images/About2.png" style="width: 23%; height:auto; float: right;" />
+<br>
 <p class="MsoNormal"><span lang=EN-GB>
   LSCR is the London and Southern Counties Railways Consortium, a private sector
   initiative formed to fulfil the demand for increased rail capacity between London
@@ -38,6 +41,6 @@ var part2 = `
 </span></p>
 `;
 var printAbout = document.getElementById("outAbout");
-var listAbout = '<span class="close">&times;</span>' + main + part1 + part2;
+var listAbout = main + part1 + part2;
 printAbout.innerHTML = listAbout;
 console.log(listAbout);
