@@ -59,7 +59,7 @@ var displayTurn = true;
 btn.onclick = function() {
   if (displayTurn) {
     modal.style.display = "block"
-    about.style.display = "none"
+    // about.style.display = "none"
     displayTurn = !displayTurn
   } else {
     modal.style.display = "none"
@@ -70,7 +70,7 @@ btn.onclick = function() {
 btnAbout.onclick = function() {
   if (displayTurn) {
     about.style.display = "block"
-    modal.style.display = "none"
+    // modal.style.display = "none"
     displayTurn = !displayTurn
   } else {
     about.style.display = "none"
