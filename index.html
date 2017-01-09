@@ -118,6 +118,7 @@
 
               <div id="myModal" class="modal">
                   <div class="modal-content"><span class="close">&times;</span>
+                    <div id="thanks"><h1><b>Thanks for you message!</b></h1></div>
                     <form action="/js/gdform.php" method="post">
                       <p>
                         London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br>
@@ -129,8 +130,8 @@
                       <p>First Name:<input type="text" name="FirstName" /></p>
                       <p>Last Name:<input type="text" name="LastName" /></p>
                       <p>E-Mail:<input type="text" name="email" placeholder="email@yahoo.com"/></p>
-                      <p>Message:<textarea name="comments" placeholder="Type message here." cols="40" rows="10"></textarea>
-                      <input type="submit" name="submit" value="submit"/>
+                      <p>Message:<textarea name="msg" placeholder="Type message here." cols="40" rows="10"></textarea>
+                      <input type="submit" name="submit" value="submit" id="btnMail"/>
                     </form>
                   </div>
               </div>
@@ -163,12 +164,14 @@
             <div class="grid_12">
 
     <img src="images/BottomBanner.png" usemap="#logosbottom"/>
-    <map name="logosbottom">
-    			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" target="_blank" title="" alt="" />
-          <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
-    			<area shape="rect" coords="952,14,1117,106" href="#" id="myBtn" style="outline:none;" title="" alt="" />
-          <area shape="rect" coords="770,14,935,105" href="#" id="aboutBtn" style="outline:none;" title="" alt="" />
-    		</map>
+    <div id="logosbottomid">
+      <map name="logosbottom">
+  			<area shape="rect" coords="42,31,175,80" href="http://www.bml2.co.uk/" target="_blank" title="" alt="" />
+        <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
+  			<area shape="rect" coords="1015,39,1162,74" href="#" id="myBtn" style="outline:;" title="" alt="" />
+        <area shape="rect" coords="860,37,989,75" href="#" id="aboutBtn" style="outline:;" title="" alt="" />
+  		</map>
+    </div>
            </div>
       </div>
       </section>
@@ -199,11 +202,11 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home.mp4" type="video/mp4" codecs="libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg" preload="metadata"><source src="videolong/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
+          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg" preload="metadata"><source src="videolong/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
           // actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home.mp4" type="video/mp4" codecs="libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
+          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.webm" type="video/webm" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
           // actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         }

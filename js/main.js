@@ -44,9 +44,11 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 var about = document.getElementById('aboutModal');
+var thanks = document.getElementById('thanks');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var btnAbout = document.getElementById("aboutBtn");
+var btnMail = document.getElementById('btnMail');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var spanAbout = document.getElementsByClassName("close")[1];
@@ -90,4 +92,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
         about.style.display = "none";
     }
+}
+
+btnMail.onclick = function() {
+  thanks.style.display = "block"
+  setTimeout(modal.style.display = "none", 5000);
 }
