@@ -44,35 +44,38 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 var about = document.getElementById('aboutModal');
+var thanks = document.getElementById('thanks');
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var btnAbout = document.getElementById("aboutBtn");
+var btnMail = document.getElementById('btnMail');
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var spanAbout = document.getElementsByClassName("close")[1];
 
-var displayTurn = true;
+var displayTurnBtn = true;
+var displayTurnbtnAbout = true;
 
 // When the user clicks the button, open the modal
 btn.onclick = function() {
-  if (displayTurn) {
+  if (displayTurnBtn) {
     modal.style.display = "block"
-    about.style.display = "none"
-    displayTurn = !displayTurn
+    // about.style.display = "none"
+    displayTurnBtn = !displayTurnBtn
   } else {
     modal.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnBtn = !displayTurnBtn
   }
 }
 
 btnAbout.onclick = function() {
-  if (displayTurn) {
+  if (displayTurnbtnAbout) {
     about.style.display = "block"
-    modal.style.display = "none"
-    displayTurn = !displayTurn
+    // modal.style.display = "none"
+    displayTurnbtnAbout = !displayTurnbtnAbout
   } else {
     about.style.display = "none"
-    displayTurn = !displayTurn
+    displayTurnbtnAbout = !displayTurnbtnAbout
   }
 }
 
@@ -90,4 +93,9 @@ window.onclick = function(event) {
         modal.style.display = "none";
         about.style.display = "none";
     }
+}
+
+btnMail.onclick = function() {
+  thanks.style.display = "block"
+  setTimeout(modal.style.display = "none", 5000);
 }

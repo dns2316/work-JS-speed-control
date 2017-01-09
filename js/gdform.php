@@ -1,6 +1,6 @@
 <?php
 	// VALUES FROM THE FORM
-	$name		= $_POST['name'];
+	$name		= $_POST['FirstName'] + $_POST['LastName'];
 	$email		= $_POST['email'];
 	$message	= $_POST['msg'];
 
@@ -47,9 +47,12 @@
 	$recipient	= "clucas2174@n3plcpnl0066.prod.ams3.secureserver.net";
 	$subject	= "Contact From Your Website";
 	$message	= wordwrap($message, 1024);
+	$re = "LSCR. Copy you mail";
 
 	// SEND THE EMAIL TO YOU
 	mail($recipient, $subject, $message, $headers);
+	mail($email, $re, $message, $headers);
+
 
 	// REDIRECT TO THE THANKS PAGE
 	// header("location: thanks.php");
