@@ -1,6 +1,6 @@
 var main = `
 <span class="close">&times;</span> <br>
-<img src="images/About1.png" style="width: 35%; height:auto;" /><img src="images/About2.png" style="width: 23%; height:auto; float: right;" />
+<img src="images/about1.png" style="width: 35%; height:auto;" /><img src="images/about2.png" style="width: 23%; height:auto; float: right;" />
 <br>
 <p class="MsoNormal"><span lang=EN-GB>
   LSCR is the London and Southern Counties Railways Consortium, a private sector
