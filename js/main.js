@@ -88,12 +88,17 @@ spanAbout.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal || event.target == about) {
-        modal.style.display = "none";
-        about.style.display = "none";
-    }
-}
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//         modal.style.display = "none";
+//     }
+// }
+//
+// window.onclick = function(event) {
+//     if (event.target == about) {
+//         about.style.display = "none";
+//     }
+// }
 
 btnMail.onclick = function() {
   thanks.style.display = "block"

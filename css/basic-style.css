@@ -30,9 +30,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Modal Content */
-#myModal {
+/*#myModal {
 	z-index: 1;
-}
+}*/
 
 #thanks {
 	display: none;
@@ -137,7 +137,20 @@ aside {
 
 p{ margin:0 0 1.5em;}
 
-.modal {
+.myModal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    top: 0px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		right:0px;
+}
+
+.aboutModal {
     display: none; /* Hidden by default */
     position:absolute; /* Stay in place */
     z-index: 1; /* Sit on top */
