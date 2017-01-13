@@ -16,7 +16,7 @@
   <link href='css/google.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/basic-style.css?v=1.0">
+  <link rel="stylesheet" href="css/basic-style0-5.css">
 
   <link rel="stylesheet" href="css/freelance.css">
 
@@ -118,7 +118,7 @@
       <!-- </video>-->
 
               <div id="myModal" class="myModal">
-                  <div class="modal-content"><span class="close">&times;</span>
+                  <div class="modal-content"><span class="close" id="closeContacts">&times;</span>
                     <!-- <div id="thanks"><h1><b>Thanks for you message!</b></h1></div> -->
                     <form name="mail" action="/js/gdform.php" method="post">
                       <p>
@@ -145,7 +145,7 @@
                   <div class="theRoute-content" id="theRoute">
                     <span class="close" id="closeMap">&times;</span>
                     <div id="theRoute">
-                      <img src="images/Map90trim.png">
+                      <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png">
                     </div>
                   </div>
               </div>
@@ -219,11 +219,11 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
+          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home-fix.mp4" type="video/mp4"><source src="videolong/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
           // actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
+          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home-fix.mp4" type="video/mp4><source src="videoshort/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
           // actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         }
@@ -339,8 +339,8 @@ function fallback(video) {
   }
   </script>
 
-  <script src="about.js"></script>
-  <script src="js/main.js"></script>
+  <script src="about0-7.js"></script>
+  <script src="js/main0-1.js"></script>
   <?php include_once "js/gdform.php"; ?>
 
 </html>

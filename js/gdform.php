@@ -42,12 +42,12 @@
 
 
 	// CREATE THE EMAIL
-	$recipient	= "info@londonscr.co.uk";
+	$recipient	= "christopher.lucas@londonscr.co.uk";
 	$headers	= "Content-Type: text/html; charset=utf-8\nFrom: London & SCR Limited" ." <".$recipient.">" . "\r\n" . "Reply-To: " . $email . "\r\n" . "Cc: " ."<jao914@yandex.com>, <clucas2174@gmail.com>, ".$email."\r\n";
 	$subject	= "Contact From londonscr.co.uk";
 	$sendMessage = wordwrap($message, 1024);
 
-	ini_set('sendmail_from', 'info@londonscr.co.uk');
+	ini_set('sendmail_from', 'christopher.lucas@londonscr.co.uk');
 
 	// SEND THE EMAIL
 	mail($recipient, $subject, $sendMessage, $headers);
