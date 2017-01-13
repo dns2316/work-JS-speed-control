@@ -44,48 +44,107 @@
 // Get the modal
 var modal = document.getElementById('myModal');
 var about = document.getElementById('aboutModal');
-var thanks = document.getElementById('thanks');
+var theRoute = document.getElementById('routeModal');
+// var thanks = document.getElementById('thanks');
+
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
 var btnAbout = document.getElementById("aboutBtn");
-var btnMail = document.getElementById('btnMail');
+var btnTheRoute = document.getElementById("theRouteBtn");
+// var btnMail = document.getElementById('btnMail');
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var spanAbout = document.getElementsByClassName("close")[1];
+var spanRoute = document.getElementsByClassName("close")[2];
 
 var displayTurnBtn = true;
 var displayTurnbtnAbout = true;
+var displayTurnbtnRoute = true;
 
-// When the user clicks the button, open the modal
+// functions
+closeContact = function() {
+  modal.style.display = "none";
+  displayTurnBtn = !displayTurnBtn
+}
+
+closeAbout = function() {
+  about.style.display = "none";
+  displayTurnbtnAbout = !displayTurnbtnAbout
+}
+
+closeTheRoute = function() {
+  theRoute.style.display = "none";
+  displayTurnbtnRoute = !displayTurnbtnRoute
+}
+
+openContact = function() {
+  modal.style.display = "block";
+  displayTurnBtn = !displayTurnBtn
+}
+
+openAbout = function() {
+  about.style.display = "block";
+  displayTurnbtnAbout = !displayTurnbtnAbout
+}
+
+openTheRoute = function() {
+  theRoute.style.display = "block";
+  displayTurnbtnRoute = !displayTurnbtnRoute
+}
+// -------
+
+// When the user clicks the button, open the modal Contact
 btn.onclick = function() {
   if (displayTurnBtn) {
-    modal.style.display = "block"
-    // about.style.display = "none"
-    displayTurnBtn = !displayTurnBtn
+    openContact();
+    // theRoute.style.display = "none";
   } else {
-    modal.style.display = "none"
-    displayTurnBtn = !displayTurnBtn
+    closeContact();
   }
 }
 
+// When the user clicks the button, open the modal About
 btnAbout.onclick = function() {
   if (displayTurnbtnAbout) {
-    about.style.display = "block"
-    // modal.style.display = "none"
-    displayTurnbtnAbout = !displayTurnbtnAbout
+    openAbout();
+    // theRoute.style.display = "none";
   } else {
-    about.style.display = "none"
-    displayTurnbtnAbout = !displayTurnbtnAbout
+    closeAbout();
   }
 }
 
-// When the user clicks on <span> (x), close the modal
+// When the user clicks the button, open the modal The Route
+btnTheRoute.onclick = function() {
+  if (displayTurnbtnRoute) {
+    openTheRoute();
+    // modal.style.display = "none";
+    // about.style.display = "none";
+  } else {
+    closeTheRoute();
+  }
+}
+
+// When the user clicks on <span> (x), close the modal Contact
 span.onclick = function() {
-    modal.style.display = "none";
+    closeContact();
 }
+
+// When the user clicks on <span> (x), close the modal About
 spanAbout.onclick = function() {
-    about.style.display = "none";
+    closeAbout();
 }
+
+// When the user clicks on <span> (x), close the modal The Route
+spanRoute.onclick = function() {
+    closeTheRoute();
+}
+
+// If the Route is open -> do not open the "About" or "Contact"!
+// if(displayTurnbtnRoute) {
+//   closeContact();
+//   closeAbout();
+// }
 
 // When the user clicks anywhere outside of the modal, close it
 // window.onclick = function(event) {
@@ -100,7 +159,7 @@ spanAbout.onclick = function() {
 //     }
 // }
 
-btnMail.onclick = function() {
-  thanks.style.display = "block"
-  setTimeout(modal.style.display = "none", 5000);
-}
+// btnMail.onclick = function() {
+//   thanks.style.display = "block"
+//   setTimeout(modal.style.display = "none", 5000);
+// }

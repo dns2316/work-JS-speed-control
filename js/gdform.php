@@ -1,8 +1,8 @@
 <?php
 	// VALUES FROM THE FORM
-	$name		= $_POST['FirstName'] + $_POST['LastName'];
-	$email		= $_POST['email'];
-	$message	= $_POST['msg'];
+	$name = $_POST['FirstName'] . ' ' . $_POST['LastName'];
+	$email = $_POST['email'];
+	$message = $_POST['msg'];
 
 	// ERROR & SECURITY CHECKS
 	if ( ( !$email ) ||
@@ -14,8 +14,8 @@
 		exit;
 	}
 	if ( ( !$name ) ||
-		 ( strlen($name) > 100 ) ||
-		 ( preg_match("/[:=@\<\>]/", $name) )
+		 ( strlen($name) > 100 )
+		//  || ( preg_match("/[:=@\<\>]/", $name) )
 	   )
 	{
 		print "Error: Invalid Name";
@@ -42,18 +42,15 @@
 
 
 	// CREATE THE EMAIL
-	$headers	= "Content-Type: text/plain; charset=iso-8859-1\n";
-	$headers	.= "From: $name <$email>\n";
-	$recipient	= "clucas2174@n3plcpnl0066.prod.ams3.secureserver.net";
-	$subject	= "Contact From Your Website";
-	$message	= wordwrap($message, 1024);
-	$re = "LSCR. Copy you mail";
+	$recipient	= "info@londonscr.co.uk";
+	$headers	= "Content-Type: text/html; charset=utf-8\nFrom: London & SCR Limited" ." <".$recipient.">" . "\r\n" . "Reply-To: " . $email . "\r\n" . "Cc: " ."<jao914@yandex.com>, <clucas2174@gmail.com>, ".$email."\r\n";
+	$subject	= "Contact From londonscr.co.uk";
+	$sendMessage = wordwrap($message, 1024);
 
-	// SEND THE EMAIL TO YOU
-	mail($recipient, $subject, $message, $headers);
-	mail($email, $re, $message, $headers);
+	ini_set('sendmail_from', 'info@londonscr.co.uk');
 
-
+	// SEND THE EMAIL
+	mail($recipient, $subject, $sendMessage, $headers);
 	// REDIRECT TO THE THANKS PAGE
-	// header("location: thanks.php");
+	header('Location:http://www.londonscr.co.uk/thanks.html');
 ?>

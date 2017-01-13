@@ -16,14 +16,14 @@ BASE (MOBILE) SIZE
 /* typography */
 body{
 	color:#666;
-	font-family:'Ubuntu', Arial, Helvetica, sans-serif;
+	font-family:Tahoma, 'Ubuntu', Arial, Helvetica, sans-serif;
 	font-size:1em;
 	line-height:1.4em;
 	font-weight:normal;
 }
 h1, h2, h3, h4, h5, h6{
 	font-weight:normal;
-	font-family:'Droid Serif', Arial, Helvetica, sans-serif;
+	font-family:Tahoma, 'Droid Serif', Arial, Helvetica, sans-serif;
 	line-height:1.5em;
 	margin:.45em 0;
 	padding:0;
@@ -84,11 +84,39 @@ h1, h2, h3, h4, h5, h6{
 	border-left: 1px solid black;
 }
 .outAbout-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
-.outAbout-content p{color:#e22525; font-weight:bold; font-size:20px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+.outAbout-content p{color:#e22525; font-weight:bold; font-size:21px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
 .outAbout-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
 .outAbout-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
   letter-spacing: 1px;}
 
+	.theRoute-content {
+	  background-color: rgb(255,255,255);
+	  padding: 20px 50px;
+	  width: 790px;
+		/*float:right;*/
+		height: auto;
+		min-height: 100%;
+	}
+	.theRoute-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+	.theRoute-content p{color:#e22525; font-weight:bold; font-size:20px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+	.theRoute-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
+	.theRoute-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
+	  letter-spacing: 1px;}
+#theRoute {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#theRoute img {
+	height: auto;
+	width: 100%;
+}
+#closeMap{
+	position: absolute;
+	top: 3.5%;
+	left: 3.5%;
+	font-size: 5vw;
+}
 
 /* links */
 a,
@@ -162,6 +190,19 @@ p{ margin:0 0 1.5em;}
     width: 60%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		right:0px;
+}
+
+.routeModal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    top: 0px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0); /* Black w/ opacity */
 		right:0px;
@@ -401,11 +442,17 @@ This is for mobile devices with a bit larger screens.
 .modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .modal-content input{font-size: 6px; padding:7px 0px;}
 /*.modal{right:0px;}*/
-.outAbout-content p{font-size: 6px;line-height: 8px;text-shadow: none;}
+.outAbout-content p{font-size: 7px;line-height: 8px;text-shadow: none;}
 .outAbout-content{width:100%; padding:5px 10px;}
 .outAbout-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
 .outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .outAbout-content input{font-size: 6px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 6px;line-height: 8px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 6px; padding:7px 0px;}
 }
 
 /*
@@ -631,11 +678,18 @@ you can add resource intensive styles.
 .modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .modal-content input{font-size: 14px; padding:7px 0px;}
 
-.outAbout-content p{font-size: 14px;line-height: 16px;text-shadow: none;}
+.outAbout-content p{font-size: 15px;line-height: 16px;text-shadow: none;}
 .outAbout-content{width:100%; padding:5px 10px;}
 .outAbout-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
 .outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .outAbout-content input{font-size: 14px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 14px;line-height: 16px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 14px; padding:7px 0px;}
+
 }
 
 /*
@@ -773,17 +827,24 @@ PRINT STYLESHEET
 .wide-content .signleft3{left:58%; top:13%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
+
 .modal-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
 .modal-content{width:100%; padding:5px 10px;}
 .modal-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
 .modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .modal-content input{font-size: 8px; padding:7px 0px;}
 
-.outAbout-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
+.outAbout-content p{font-size: 9px;line-height: 10px;text-shadow: none;}
 .outAbout-content{width:100%; padding:5px 10px;}
 .outAbout-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
 .outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .outAbout-content input{font-size: 8px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 8px; padding:7px 0px;}
 }
 
 @media (min-width: 551px) and (max-width: 600px) {
@@ -826,17 +887,24 @@ PRINT STYLESHEET
 .wide-content .signleft3{left:58%; top:28%;}
 .wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
 .wide-content .signleft1 img{width:50%;}
+
 .modal-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
 .modal-content{width:100%; padding:5px 10px;}
 .modal-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
 .modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .modal-content input{font-size: 12px; padding:7px 0px;}
 
-.outAbout-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
+.outAbout-content p{font-size: 14px;line-height: 14px;text-shadow: none;}
 .outAbout-content{width:100%; padding:5px 10px;}
 .outAbout-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
 .outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
 .outAbout-content input{font-size: 12px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 12px; padding:7px 0px;}
 
 }
 

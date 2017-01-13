@@ -3,6 +3,7 @@
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 
   <title>Home</title>
   <meta name="description" content="Simple Responsive Template is a template for responsive web design. Mobile first, responsive grid layout, toggle menu, navigation bar with unlimited drop downs, responsive slideshow">
@@ -15,7 +16,7 @@
   <link href='css/google.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/basic-style.css">
+  <link rel="stylesheet" href="css/basic-style.css?v=1.0">
 
   <link rel="stylesheet" href="css/freelance.css">
 
@@ -118,27 +119,34 @@
 
               <div id="myModal" class="myModal">
                   <div class="modal-content"><span class="close">&times;</span>
-                    <div id="thanks"><h1><b>Thanks for you message!</b></h1></div>
-                    <form action="/js/gdform.php" method="post">
+                    <!-- <div id="thanks"><h1><b>Thanks for you message!</b></h1></div> -->
+                    <form name="mail" action="/js/gdform.php" method="post">
                       <p>
                         London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br>
                         <a href="mailto:info@LondonSCR.co.uk" style="color:#e22525;text-decoration: none;">Email: info@LondonSCR.co.uk</a>
                       </p>
                       <br>
                       <input type="hidden" name="subject" value="Form Submission" />
-                      <!-- <input type="hidden" name="redirect" value="thankyou.html" /> -->
+                      <input type="hidden" name="redirect" value="http://www.londonscr.co.uk/thanks.html" />
                       <p>First Name:<input type="text" name="FirstName" /></p>
                       <p>Last Name:<input type="text" name="LastName" /></p>
                       <p>E-Mail:<input type="text" name="email" placeholder="email@yahoo.com"/></p>
                       <p>Message:<textarea name="msg" placeholder="Type message here." cols="40" rows="10"></textarea>
-                      <input type="submit" name="submit" value="submit" id="btnMail"/>
+                      <input id="btnMail" type="submit" name="submit" value="submit" />
                     </form>
                   </div>
               </div>
 
               <div id="aboutModal" class="aboutModal">
-                  <div class="outAbout-content" id="outAbout">
+                  <div class="outAbout-content" id="outAbout"></div>
+              </div>
 
+              <div id="routeModal" class="routeModal">
+                  <div class="theRoute-content" id="theRoute">
+                    <span class="close" id="closeMap">&times;</span>
+                    <div id="theRoute">
+                      <img src="images/Map90trim.png">
+                    </div>
                   </div>
               </div>
 
@@ -165,10 +173,11 @@
 
     <!-- <img src="images/BottomBanner.png" usemap="#logosbottom"/> -->
     <div id="logosbottomid">
-      <a href="http://www.bml2.co.uk/" target="_blank"><img src="images/BottomBannerAlt_01.png" /></a>
-      <a href="#"><img src="images/BottomBannerAlt_02.png" /></a>
-      <a href="#" id="aboutBtn"><img src="images/BottomBannerAlt_03.png" /></a>
-      <a href="#"id="myBtn"><img src="images/BottomBannerAlt_04.png" /></a>
+      <a href="http://www.bml2.co.uk/" target="_blank" style="outline:none;"><img src="images/BottomBannerAltV3_01.png" style="outline:none;" /></a>
+      <a href="#" style="outline:none;"><img src="images/BottomBannerAltV3_02.png" /></a>
+      <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/BottomBannerAltV3_03.png" /></a>
+      <a href="#" id="aboutBtn" style="outline:none;"><img src="images/BottomBannerAltV3_04.png" /></a>
+      <a href="#"id="myBtn" style="outline:none;"><img src="images/BottomBannerAltV3_05.png" /></a>
       <!-- <map name="logosbottom"> -->
   			<!-- <area shape="rect" style="top: 42px; left: 31px; width: 175px; height: 80px; display:block; position: absolute;" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
         <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
@@ -332,5 +341,6 @@ function fallback(video) {
 
   <script src="about.js"></script>
   <script src="js/main.js"></script>
+  <?php include_once "js/gdform.php"; ?>
 
 </html>
