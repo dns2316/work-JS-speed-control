@@ -1,0 +1,936 @@
+/*
+Simple Responsive Template v 1.2
+
+
+primary styles
+   Author: www.prowebdesign.ro
+   Add your own styles to customize the project.
+
+
+
+BASE (MOBILE) SIZE
+	These are the mobile styles. It's what people see on their phones.
+	Remember, keep it light: Speed is Important.
+*/
+
+/* typography */
+body{
+	color:#666;
+	font-family:Tahoma, 'Ubuntu', Arial, Helvetica, sans-serif;
+	font-size:1em;
+	line-height:1.4em;
+	font-weight:normal;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+	font-family:Tahoma, 'Droid Serif', Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	margin:.45em 0;
+	padding:0;
+}
+
+/* Modal Content */
+/*#myModal {
+	z-index: 1;
+}*/
+
+#thanks {
+	display: none;
+	text-align: center;
+	vertical-align: middle;
+	background: #a7e1f7;
+	position: absolute;
+	z-index: 100;
+	height: 28%;
+	width: 25%;
+	top: 44%;
+	right: 8%;
+	border: 1px solid black;
+	font-style: italic;
+
+}
+
+#logosbottomid {
+	display: -webkit-box;      /* iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* Firefox 19 */
+	display: -ms-flexbox;      /* IE 10 */
+	display: -webkit-flex;     /* Chrome */
+	display: flex;             /* Opera 12.1, Firefox 20+ */
+	align-content: flex-start;
+}
+
+.close {
+	position: absolute;
+	top: 3.5%;
+	cursor: pointer;
+	font-size: 25px;
+}
+#closeContacts {
+	position: absolute;
+	float: right;
+	top: 3.5%;
+	right: 3.5%;
+}
+
+#btnMail {
+	font-size: 1.5em;
+}
+
+.modal-content {
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px 50px;
+    width: 500px;
+		float:left;
+		height: auto;
+		min-height: 100%;
+		/*border-right: 1px solid black;*/
+}
+.modal-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content p{color:#e22525; font-weight:bold; font-size:20px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+.modal-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
+.modal-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
+    letter-spacing: 1px;}
+
+.outAbout-content {
+  background-color: rgba(255,255,255,0.8);
+  padding: 20px 50px;
+  width: 690px;
+	float:right;
+	height: auto;
+	min-height: 100%;
+	border-left: 1px solid black;
+}
+.outAbout-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.outAbout-content p{color:#e22525; font-weight:bold; font-size:21px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+.outAbout-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
+.outAbout-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
+  letter-spacing: 1px;}
+
+	.theRoute-content {
+	  background-color: rgba(255,255,255,0.9);
+	  padding: 20px 50px;
+	  width: 790px;
+		/*float:right;*/
+		height: auto;
+		min-height: 100%;
+	}
+	.theRoute-content input[type='text']{width:92%; border:solid 2px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left; margin-top:5px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+	.theRoute-content p{color:#e22525; font-weight:bold; font-size:20px; line-height: 24px; margin-bottom:0px;text-shadow: 1px 1px 2px #666;letter-spacing: 1px;}
+	.theRoute-content textarea{margin-top:5px; font-size:14px; border:solid 2px #e22525; width:92%; outline:none; padding:10px 10px; height:120px;}
+	.theRoute-content input{background:none; border:none;color:#e22525; font-weight:bold; font-size:20px; width:92%;text-align: right; outline:none;padding: 10px 0px;text-shadow: 1px 1px 2px #666;
+	  letter-spacing: 1px;}
+#theRoute {
+	display: flex;
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	justify-content: center;
+	flex-direction: column;
+}
+#theRoute img {
+	height: auto;
+	width: 100%;
+}
+#closeMap{
+	position: absolute;
+	top: 3.5%;
+	left: 3.5%;
+	font-size: 35px;
+}
+
+/* links */
+a,
+a:visited,
+a:active,
+a:hover{color:#0099ff;}
+a:hover{ text-decoration:none;}
+
+
+/* Box sizing. Awesome thing. Read about it here: http://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+*{	box-sizing:border-box;
+	-moz-box-sizing:border-box; margin:0px; padding:0px;}
+
+
+/* structure */
+.wrapper{
+	width: 92%;
+	margin: 0 auto;
+}
+header{
+	padding:15px 0;
+}
+#banner{
+	text-align:center;
+}
+
+#hero,
+#page-header{
+	background:#f3f3f3;
+	border-top:1px solid #e2e2e2;
+	border-bottom:1px solid #e2e2e2;
+	padding:20px 0;
+}
+#hero h1{
+	line-height:1.2em;
+	margin-top:0px;
+	margin-bottom:10px;}
+
+.flexslider{
+	display:none;
+}
+
+#content {
+	margin:0px 0;
+}
+
+aside {
+	margin:40px 0;
+}
+
+p{ margin:0 0 1.5em;}
+
+.myModal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    top: 0px;
+    width: 40%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		left:0px;
+}
+
+.aboutModal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    top: 0px;
+    width: 60%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		right:0px;
+}
+
+.routeModal {
+    display: none; /* Hidden by default */
+    position:absolute; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    top: 0px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+		right:0px;
+}
+
+/* RESPONSIVE IMAGES */
+img{ max-width:100%; height:auto;}
+
+
+/*MAIN MENU*/
+.menu-toggle{
+	display:block;
+	padding:10px;
+	margin:20px 0 0;
+	background:#666;
+	color:#fff;
+	cursor:pointer;
+	text-transform:uppercase;
+	font-size:20px;
+}
+.menu-toggle.toggled-on{
+	background:#0099ff;
+}
+.srt-menu{
+	display:none;
+}
+.srt-menu.toggled-on{
+	display:block;
+	position:relative;
+	z-index:10;
+}
+
+.srt-menu{
+	clear:both;
+	margin-bottom:60px;
+
+}
+.srt-menu li a {
+	background:#dadada;
+	display:block;
+	margin:1px 0;
+	padding:10px;
+	text-decoration:none;
+}
+.srt-menu li a:hover{
+	background:#0099ff;
+	color:#fff;
+}
+.srt-menu li li a {
+	background:#e8e8e8;
+	padding-left:40px;
+}
+.srt-menu li li li a {
+	background:#efefef;
+	padding-left:80px;
+}
+
+/*SECONDARY MENU*/
+#secondary-navigation{
+	margin-bottom:60px;
+}
+#secondary-navigation ul{
+	margin:0;
+	padding:0;
+}
+#secondary-navigation ul li a{
+	background:#E6E6E6;
+	display:block;
+	margin:5px 0;
+	padding:10px;
+	text-decoration:none;
+}
+#secondary-navigation ul li a:hover,
+#secondary-navigation ul li.current a{
+	background:#0099ff;
+	color:#fff;
+}
+
+/*SPACE GRID ELEMENTS VERTICALLY, SINCE THEY ARE ONE UNDER ANOTHER SO FAR*/
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	margin-bottom:0px;
+	/*positioning and padding*/
+	position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*FOOTER*/
+footer{
+	clear:both;
+	font-size:80%;
+	padding:20px 0;
+}
+footer ul{
+	margin:0;
+	padding:0;
+}
+
+/*colors and backgrounds*/
+body{
+	background:#fff;
+}
+h1, h2, h3, h4, h5, h6{
+	color:#333;
+}
+
+footer{
+	background:#333;
+	color:#ccc;
+}
+footer h1, footer h2, footer h3, footer h4{
+	color:#CCC;
+	margin-bottom:10px;
+}
+footer ul{
+	margin:0 0 0 8%;
+}
+
+a.buttonlink{
+	background:#0099ff;
+	border-radius:7px;
+	color:#fff;
+	display:block;
+	float:left;
+	margin:10px 15px 10px 0;
+	padding:10px;
+	text-decoration:none;
+}
+a.buttonlink:hover{
+	background:#8dbc01;
+}
+.greenelement{
+	background:#5ec79e;
+	color:#fff;
+}
+.violetelement{
+	background:#887dc2;
+	color:#fff;
+}
+#pageloader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 99999;
+}
+.white-bg {
+    background-color: white !important;
+}
+.outter {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    width: 400px;
+    height: 400px;
+}
+
+
+/* Contain floats*/
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after,
+.container:after,
+.row:after{
+  clear: both;
+}
+.signleft{position: absolute;
+    top: 30%;
+    left: 28%; width:6%;}
+.signleft img{width:100%;}
+.signleft1 img{width:50%;}
+.signleft2 img{width:100%;}
+.signleft3 img{width:100%;}
+.signleft1{position: absolute;
+    top: 30%;
+    left: 38%; width:6%;}
+.signleft2{position: absolute;
+    top: 30%;
+    left: 48%; width:6%;}
+.signleft3{position: absolute;
+    top: 30%;
+    left: 59%; width:6%;}
+.signright{position: absolute;
+    top: 30%;
+    right:2%; width:40%;}
+
+
+/*
+LARGER MOBILE DEVICES
+This is for mobile devices with a bit larger screens.
+*/
+@media only screen and (min-width: 231px) {
+#banner{
+	float:left;
+	text-align:left;
+	margin-bottom:-20px;/*this depends on the height of the logo*/
+}
+.menu-toggle{/*make menu float right, instead of sitting under the logo*/
+	margin-top:10px; /*this depends on the height of the logo*/
+	float:right;
+}
+.signright{position: absolute;
+    top: 15%;right:5%; width:27%;}
+.signleft{top: 5%;}
+.signleft1{top: 5%;}
+.signleft2{top: 5%;}
+.signleft3{top: 5%;}
+.vdvd{margin-top:20px;}
+.grid_3{width:35%;}
+.grid_2{width:45% !important;}
+.grid_8 img{margin-left:-31px !important;}
+
+.long img{width:100% !important;}
+/*....................#columnsdemo .grid_6 img{width:30% !important;}................*/
+#columnsdemo .grid_6{width:50% !important;}
+.modal-content p{font-size: 6px;line-height: 8px;text-shadow: none;}
+.modal-content{width:100%; padding:5px 10px;}
+.modal-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 6px; padding:7px 0px;}
+/*.modal{right:0px;}*/
+.outAbout-content p{font-size: 7px;line-height: 8px;text-shadow: none;}
+.outAbout-content{width:100%; padding:5px 10px;}
+.outAbout-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
+.outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.outAbout-content input{font-size: 6px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 6px;line-height: 8px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 20px;    border: solid 1px #e22525;font-size:6px; margin-top:2px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:6px; outline:none;background:#FFF; text-align:left;margin-top:2px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 6px; padding:7px 0px;}
+}
+
+/*
+TABLET & SMALLER LAPTOPS
+The average viewing window and preferred media query for those is 768px.
+But I think that some more breathing space is good:)
+*/
+
+#Table_01 img{ width:100%; height:auto;}
+#columnsdemo .grid_4 > img {
+    padding: 0 10px;
+}
+@media only screen and (min-width: 920px) {
+.vdvd{margin-top:0px;}
+.grid_6{width:45% !important;}
+.grid_2{width:45% !important;}
+/*....................#columnsdemo .grid_6 img{width:30%;}................*/
+.wrapper{
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+#banner{
+	float:left;
+	text-align:left;
+	margin-bottom:0px;
+}
+header{
+	padding:0;
+}
+#content {
+	float:left;
+	width:65%;
+}
+#content.wide-content{
+	float:left;
+	width:100%;
+}
+
+.flexslider{
+display:block;
+/*demo 1 slider theme*/
+margin: 0 0 60px;
+background: #fff;
+border: 4px solid #fff;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+-o-border-radius: 4px;
+border-radius: 4px;
+box-shadow: 0 1px 4px rgba(0,0,0,.2);
+-webkit-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+-moz-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+-o-box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+
+
+aside {
+	float:right;
+	width:30%;
+}
+
+/*** MAIN MENU - ESSENTIAL STYLES ***/
+.menu-toggle{display:none;}
+#menu-main-navigation{display:block;}
+
+.srt-menu, .srt-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.srt-menu ul {
+	position:		absolute;
+	display:none;
+	width:			12em; /* left offset of submenus need to match (see below) */
+}
+.srt-menu ul li {
+	width:			100%;
+}
+.srt-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.srt-menu li {
+	float:			left;
+	position:		relative;
+	margin-left:1px;
+}
+.srt-menu li li {
+	margin-left:0px;
+}
+.srt-menu a {
+	display:		block;
+	position:		relative;
+}
+.srt-menu li:hover ul,
+.srt-menu li.sfHover ul {
+	display:block;
+	left:			0;
+	top:			45px; /* match top ul list item height */
+	z-index:		99;
+	-webkit-box-shadow:  2px 3px 2px 0px rgba(00, 00, 00, .3);
+    box-shadow:  2px 3px 2px 0px rgba(00, 00, 00, .3);
+}
+ul.srt-menu li:hover li ul,
+ul.srt-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.srt-menu li li:hover ul,
+ul.srt-menu li li.sfHover ul {
+	left:			12em; /* match ul width */
+	top:			0;
+}
+ul.srt-menu li li:hover li ul,
+ul.srt-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.srt-menu li li li:hover ul,
+ul.srt-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+
+/*** DEMO1 SKIN ***/
+#topnav, .srt-menu {
+	float:right;
+	margin: .35em 0 0 0;
+}
+.srt-menu a {
+	text-decoration:none;
+}
+.srt-menu li a {
+	background:#fff;
+	margin:0;
+	padding:10px 20px;
+	height:45px;
+}
+.srt-menu a, .srt-menu a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#0099ff;
+}
+.srt-menu li li a {
+		border-top:		1px solid rgba(255,255,255,.2);
+		background:		#333; /*fallback for old IE*/
+		background:rgba(0,0,0,.6);
+		color:	#fff;
+		padding-left:20px;
+		height:auto;
+}
+.srt-menu li li a:visited{color:#fff;}
+.srt-menu li li li a,
+.srt-menu li.current * li a{
+	padding-left:20px;
+	background:rgba(0,0,0,.6);
+}
+
+.srt-menu li:hover > a,
+.srt-menu li.current a{
+	color:#fff;
+	background:#0099ff;
+}
+.srt-menu li li:hover > a{
+	color:#fff;
+	background:#0099ff;
+}
+
+
+
+/*GRID*/
+/*
+ & Columns : 12
+
+ */
+ .row{
+	 margin-left: -15px;
+     margin-right: -15px;
+}
+
+.grid_1 { width: 8.33333333%; }
+.grid_2 { width: 16.66666667%; }
+.grid_3 { width: 25%; }
+.grid_4 { width: 33.33333333%; }
+.grid_5 { width: 41.66666667%; }
+.grid_6 { width: 50%; }
+.grid_7 { width: 58.33333333%; }
+.grid_8 { width: 66.66666667%; }
+.grid_9 { width: 75%; }
+.grid_10 { width: 83.33333333%; }
+.grid_11 { width: 91.66666667%; }
+.grid_12 { width: 100%; }
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+	float: left;
+	display: block;
+}
+
+.rightfloat{float:right;}
+/* @notation inspired by tinyGrid, .row and percentage by Twitter Bootstrap
+ */
+
+#hero [class*="grid_"] { margin-bottom:-20px;}
+}
+
+/*
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+.vdvd{margin-top:0px;}
+.modal-content p{font-size: 14px;line-height: 16px;text-shadow: none;}
+.modal-content{width:100%; padding:5px 10px;}
+.modal-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 14px; padding:7px 0px;}
+
+.outAbout-content p{font-size: 15px;line-height: 16px;text-shadow: none;}
+.outAbout-content{width:100%; padding:5px 10px;}
+.outAbout-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
+.outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.outAbout-content input{font-size: 14px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 14px;line-height: 16px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 110px;    border: solid 1px #e22525;font-size:14px; margin-top:3px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:14px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 14px; padding:7px 0px;}
+
+}
+
+/*
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+
+}
+
+/*
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+
+}
+
+/*
+iPHONE 5 MEDIA QUERY
+iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
+*/
+@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+
+
+}
+
+/*
+PRINT STYLESHEET
+*/
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+@media (min-width: 320px) and (max-width: 340px) {
+
+#columnsdemo .grid_8 img{margin-left:0!important;}
+#main.wrapper{width:100%!important;}
+.grid_8 img{margin-left:-92px!important;}
+.wide-content .signleft{left:30%; top:-4%;}
+.wide-content .signleft1{left:40%; top:0;}
+.wide-content .signleft2{left:49%; top:-4%;}
+.wide-content .signleft3{left:58%; top:-4%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+.wide-content .signright{top:7%;}
+
+}
+
+
+@media (min-width: 341px) and (max-width: 360px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:30%; top:-7%;}
+.wide-content .signleft1{left:40%; top:-7%;}
+.wide-content .signleft2{left:49%; top:-7%;}
+.wide-content .signleft3{left:58%; top:-7%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+.wide-content .signright{top:7%;}
+
+}
+
+@media (min-width: 361px) and (max-width: 380px) {
+.wide-content .signleft{left:30%; top:-3%;}
+.wide-content .signleft1{left:40%; top:-3%;}
+.wide-content .signleft2{left:49%; top:-3%;}
+.wide-content .signleft3{left:58%; top:-3%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+.wide-content .signright{top:7%;}
+
+}
+
+@media (min-width: 381px) and (max-width: 400px) {
+.wide-content .signleft{left:30%; top:-1%;}
+.wide-content .signleft1{left:40%; top:-1%;}
+.wide-content .signleft2{left:49%; top:-1%;}
+.wide-content .signleft3{left:58%; top:-1%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+}
+
+@media (min-width: 401px) and (max-width: 440px) {
+.wide-content .signleft{left:30%; top:4%;}
+.wide-content .signleft1{left:40%; top:4%;}
+.wide-content .signleft2{left:49%; top:4%;}
+.wide-content .signleft3{left:58%; top:4%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+}
+
+@media (min-width: 441px) and (max-width: 470px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:30%; top:7%;}
+.wide-content .signleft1{left:40%; top:7%;}
+.wide-content .signleft2{left:49%; top:7%;}
+.wide-content .signleft3{left:58%; top:7%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+}
+
+@media (min-width: 471px) and (max-width: 500px) {
+	#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:30%; top:9%;}
+.wide-content .signleft1{left:40%; top:9%;}
+.wide-content .signleft2{left:49%; top:9%;}
+.wide-content .signleft3{left:58%; top:9%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+}
+
+@media (min-width: 501px) and (max-width: 550px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:29%; top:13%;}
+.wide-content .signleft1{left:40%; top:13%;}
+.wide-content .signleft2{left:49%; top:13%;}
+.wide-content .signleft3{left:58%; top:13%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+.modal-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
+.modal-content{width:100%; padding:5px 10px;}
+.modal-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 8px; padding:7px 0px;}
+
+.outAbout-content p{font-size: 9px;line-height: 10px;text-shadow: none;}
+.outAbout-content{width:100%; padding:5px 10px;}
+.outAbout-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
+.outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.outAbout-content input{font-size: 8px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 8px;line-height: 10px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 30px;    border: solid 1px #e22525;font-size:8px; margin-top:1px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:1px; font-size:8px; outline:none;background:#FFF; text-align:left;margin-top:1px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 8px; padding:7px 0px;}
+}
+
+@media (min-width: 551px) and (max-width: 600px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:29%; top:17%;}
+.wide-content .signleft1{left:40%; top:17%;}
+.wide-content .signleft2{left:49%; top:17%;}
+.wide-content .signleft3{left:58%; top:17%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+}
+
+@media (min-width: 601px) and (max-width: 670px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:29%; top:23%;}
+.wide-content .signleft1{left:40%; top:23%;}
+.wide-content .signleft2{left:49%; top:23%;}
+.wide-content .signleft3{left:58%; top:23%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+}
+
+@media (min-width: 671px) and (max-width: 760px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:29%; top:26%;}
+.wide-content .signleft1{left:40%; top:26%;}
+.wide-content .signleft2{left:49%; top:26%;}
+.wide-content .signleft3{left:58%; top:26%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+}
+
+@media (min-width: 761px) and (max-width: 920px) {
+#columnsdemo .grid_8 img{margin-left:0!important;}
+.wide-content .signleft{left:29%; top:28%;}
+.wide-content .signleft1{left:40%; top:28%;}
+.wide-content .signleft2{left:49%; top:28%;}
+.wide-content .signleft3{left:58%; top:28%;}
+.wide-content .signleft img, .wide-content .signleft2 img, .wide-content .signleft3 img{width:86%;}
+.wide-content .signleft1 img{width:50%;}
+
+.modal-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
+.modal-content{width:100%; padding:5px 10px;}
+.modal-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
+.modal-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.modal-content input{font-size: 12px; padding:7px 0px;}
+
+.outAbout-content p{font-size: 14px;line-height: 14px;text-shadow: none;}
+.outAbout-content{width:100%; padding:5px 10px;}
+.outAbout-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
+.outAbout-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.outAbout-content input{font-size: 12px; padding:7px 0px;}
+
+.theRoute-content p{font-size: 12px;line-height: 14px;text-shadow: none;}
+.theRoute-content{width:100%; padding:5px 10px;}
+.theRoute-content textarea{    height: 60px;    border: solid 1px #e22525;font-size:12px; margin-top:3px;}
+.theRoute-content input[type='text']{width:92%; border:solid 1px #e22525; padding:5px; font-size:12px; outline:none;background:#FFF; text-align:left;margin-top:3px;text-shadow: none; font-weight:normal; letter-spacing:0px;}
+.theRoute-content input{font-size: 12px; padding:7px 0px;}
+
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+#columnsdemo .grid_4 > img{ padding:0;}
+.grid_8.long{ padding:0 15px 10px!important;}
+#columnsdemo > .grid_4{ padding-bottom:0!important}
+.wide-content #Table_01 tr td:nth-child(5){ display:none;}
+}
