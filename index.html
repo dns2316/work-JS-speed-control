@@ -16,7 +16,7 @@
   <link href='css/google.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/basic-style0-5.css">
+  <link rel="stylesheet" href="css/basic-style0-7.css">
 
   <link rel="stylesheet" href="css/freelance.css">
 
@@ -104,8 +104,6 @@
           <div class="grid_12">
             <div class="vdvd" id="erMsg">
               <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline playsinline>
-                <source src="videoshort/lscr.mp4" type="video/mp4">
-                  Your browser doesn't support the HTML5 video element.
               </video>
 
     <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
@@ -145,7 +143,7 @@
                   <div class="theRoute-content" id="theRoute">
                     <span class="close" id="closeMap">&times;</span>
                     <div id="theRoute">
-                      <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png">
+                      <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png" width="1280px" height="500px">
                     </div>
                   </div>
               </div>
@@ -215,18 +213,18 @@
 function windowsPhone(data) {
   var iemobile;
   if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
-   console.log('windows mobile')
-   iemobile = data + `
-    <source src="videoshort/home.mp4" type="video/mp4" />
-    <object type="application/x-shockwave-flash"
-            data="swf/flowplayer-3.2.18.swf" width="100" height="auto">
-        <param name="movie" value="swf/flowplayer-3.2.18.swf" />
-        <param name="allowFullscreen" value="true" />
-        <param name="wmode" value="transparent" />
-        <param name="flashVars"
-               value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />
-        <img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />
-    </object>`;
+    console.log('windows mobile')
+    iemobile = data;
+    iemobile = iemobile + '<source src="videoshort/home.mp4" type="video/mp4" />';
+    iemobile = iemobile + '<object type="application/x-shockwave-flash"';
+    iemobile = iemobile + 'data="swf/flowplayer-3.2.18.swf" width="100" height="auto">';
+    iemobile = iemobile + '<param name="movie" value="swf/flowplayer-3.2.18.swf" />';
+    iemobile = iemobile + '<param name="allowFullscreen" value="true" />';
+    iemobile = iemobile + '<param name="wmode" value="transparent" />';
+    iemobile = iemobile + '<param name="flashVars"';
+    // iemobile = iemobile + value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />;
+    // iemobile = iemobile + '<img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />';
+    iemobile = iemobile + '</object>';
   } else {
     iemobile = data;
   }
@@ -252,7 +250,7 @@ function fallback(video) {
 
 // console.log(ua.indexOf('chrome'))
   // -1 - not found
-  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
+  if (ua.indexOf('safari') !== -1 && ua.indexOf('windows') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
       qtMsg.innerHTML = er;
@@ -283,11 +281,11 @@ function fallback(video) {
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<img src="videolong/lscr_large.gif"><source src="videolong/lscr-fix.mp4" type="video/mp4"><source src="videolong/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mov" type="video/quicktime" preload="metadata"><source src="videolong/lscr.mov" type="video/mov" preload="metadata">'; // video on Hide Q
+          actualHTML = '<img src="videolong/lscr_large.gif"><source src="videolong/lscr-fix.mp4" type="video/mp4"><source src="videolong/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mov" type="video/quicktime" preload="metadata"><source src="videolong/lscr.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.'; // video on Hide Q
           // actualHTML = actualHTML + '<object><embed src=videolong/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<img src="videoshort/lscr_small.gif"><source src="videoshort/lscr-fix.mp4" type="video/mp4"><source src="videoshort/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mp4" type="video/mp4" preload="metadata"><source src="videoshort/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mov" type="video/quicktime" preload="metadata"><source src="videoshort/lscr.mov" type="video/mov" preload="metadata">'; // video in Low Q
+          actualHTML = '<img src="videoshort/lscr_small.gif"><source src="videoshort/lscr-fix.mp4" type="video/mp4"><source src="videoshort/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mp4" type="video/mp4" preload="metadata"><source src="videoshort/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mov" type="video/quicktime" preload="metadata"><source src="videoshort/lscr.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.'; // video in Low Q
           // actualHTML = actualHTML + '<object><embed src=videoshort/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         }
