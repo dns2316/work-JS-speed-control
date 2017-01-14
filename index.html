@@ -104,7 +104,7 @@
           <div class="grid_12">
             <div class="vdvd" id="erMsg">
               <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline playsinline>
-                <source src="videoshort/home.mp4" type="video/mp4">
+                <source src="videoshort/lscr.mp4" type="video/mp4">
                   Your browser doesn't support the HTML5 video element.
               </video>
 
@@ -172,29 +172,93 @@
             <div class="grid_12">
 
     <!-- <img src="images/BottomBanner.png" usemap="#logosbottom"/> -->
-    <div id="logosbottomid">
-      <a href="http://www.bml2.co.uk/" target="_blank" style="outline:none;"><img src="images/BottomBannerAltV3_01.png" style="outline:none;" /></a>
-      <a href="#" style="outline:none;"><img src="images/BottomBannerAltV3_02.png" /></a>
-      <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/BottomBannerAltV3_03.png" /></a>
-      <a href="#" id="aboutBtn" style="outline:none;"><img src="images/BottomBannerAltV3_04.png" /></a>
-      <a href="#"id="myBtn" style="outline:none;"><img src="images/BottomBannerAltV3_05.png" /></a>
-      <!-- <map name="logosbottom"> -->
-  			<!-- <area shape="rect" style="top: 42px; left: 31px; width: 175px; height: 80px; display:block; position: absolute;" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
-        <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
-  			<!-- <area shape="rect" style="top: 1015px; left: 39px; width: 175px; height: 80px; display:block; position: absolute;" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
-        <!-- <area shape="rect" style="top: 860px; left: 37px; width: 175px; height: 80px; display:block; position: absolute;" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
+              <div id="logosbottomid">
+                <a href="http://www.bml2.co.uk/" target="_blank" style="outline:none;"><img src="images/BottomBannerAltV3_01.png" style="outline:none;" /></a>
+                <a href="#" style="outline:none;"><img src="images/BottomBannerAltV3_02.png" /></a>
+                <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/BottomBannerAltV3_03.png" /></a>
+                <a href="#" id="aboutBtn" style="outline:none;"><img src="images/BottomBannerAltV3_04.png" /></a>
+                <a href="#"id="myBtn" style="outline:none;"><img src="images/BottomBannerAltV3_05.png" /></a>
+                <!-- <map name="logosbottom"> -->
+            			<!-- <area shape="rect" style="top: 42px; left: 31px; width: 175px; height: 80px; display:block; position: absolute;" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
+                  <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
+            			<!-- <area shape="rect" style="top: 1015px; left: 39px; width: 175px; height: 80px; display:block; position: absolute;" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
+                  <!-- <area shape="rect" style="top: 860px; left: 37px; width: 175px; height: 80px; display:block; position: absolute;" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
 
-        <!-- <area shape="rect" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
-        <!-- <area shape="rect" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
-        <!-- <area shape="rect" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
-  		<!-- </map> -->
-    </div>
+                  <!-- <area shape="rect" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
+                  <!-- <area shape="rect" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
+                  <!-- <area shape="rect" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
+            		<!-- </map> -->
+             </div>
            </div>
-      </div>
-      </section>
+          </div>
+          </section>
 
     <!-- fire ups - read this file!  -->
   </body>
+
+  <script>
+  var qtMsg = document.getElementById("erMsg");
+  var ua = navigator.userAgent.toLowerCase();
+  console.log(ua)
+
+  // if (ua.indexOf("iphone") != -1) {
+  //   console.log(ua.indexOf("mozilla"))
+  //   console.log(ua)
+  //
+  //   loadForIphone = `<style type="text/css">
+  //     #video_player { display: none }
+  //   </style>
+  //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
+  //   qtMsg.innerHTML = loadForIphone;
+  // }
+
+function windowsPhone(data) {
+  var iemobile;
+  if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
+   console.log('windows mobile')
+   iemobile = data + `
+    <source src="videoshort/home.mp4" type="video/mp4" />
+    <object type="application/x-shockwave-flash"
+            data="swf/flowplayer-3.2.18.swf" width="100" height="auto">
+        <param name="movie" value="swf/flowplayer-3.2.18.swf" />
+        <param name="allowFullscreen" value="true" />
+        <param name="wmode" value="transparent" />
+        <param name="flashVars"
+               value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />
+        <img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />
+    </object>`;
+  } else {
+    iemobile = data;
+  }
+  return iemobile;
+}
+
+  if (ua.indexOf("iphone") !== -1) {
+    // console.log(ua.indexOf("iphone"))
+    function playVideo(){
+       var video = document.getElementById("video_player");
+      //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+       webview.allowsInlineMediaPlayback = true;
+       video.play();
+    }
+    playVideo();
+  }
+
+function fallback(video) {
+  var img = video.querySelector('img');
+  if (img)
+    video.parentNode.replaceChild(img, video);
+}
+
+// console.log(ua.indexOf('chrome'))
+  // -1 - not found
+  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
+    if (pluginlist.indexOf("QuickTime") == -1) {
+      var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
+      qtMsg.innerHTML = er;
+    }
+  }
+  </script>
 
   <!-- =================================================================== -->
 
@@ -219,12 +283,12 @@
 
         var actualHTML;
         if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<img src="videolong/home_large.gif"><source src="videolong/home-fix.mp4" type="video/mp4"><source src="videolong/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/home.mov" type="video/quicktime" preload="metadata"><source src="videolong/home.mov" type="video/mov" preload="metadata">'; // video on Hide Q
-          // actualHTML = actualHTML + '<object><embed src=videolong/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = '<img src="videolong/lscr_large.gif"><source src="videolong/lscr-fix.mp4" type="video/mp4"><source src="videolong/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mov" type="video/quicktime" preload="metadata"><source src="videolong/lscr.mov" type="video/mov" preload="metadata">'; // video on Hide Q
+          // actualHTML = actualHTML + '<object><embed src=videolong/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<img src="videoshort/home_small.gif"><source src="videoshort/home-fix.mp4" type="video/mp4><source src="videoshort/home.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mp4" type="video/mp4" preload="metadata"><source src="videoshort/home.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/home.mov" type="video/quicktime" preload="metadata"><source src="videoshort/home.mov" type="video/mov" preload="metadata">'; // video in Low Q
-          // actualHTML = actualHTML + '<object><embed src=videoshort/home.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+          actualHTML = '<img src="videoshort/lscr_small.gif"><source src="videoshort/lscr-fix.mp4" type="video/mp4"><source src="videoshort/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mp4" type="video/mp4" preload="metadata"><source src="videoshort/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mov" type="video/quicktime" preload="metadata"><source src="videoshort/lscr.mov" type="video/mov" preload="metadata">'; // video in Low Q
+          // actualHTML = actualHTML + '<object><embed src=videoshort/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
           actualHTML = windowsPhone(actualHTML);
         }
           // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
@@ -274,70 +338,6 @@
 
 
   <!-- =================================================================== -->
-
-  <script>
-  var qtMsg = document.getElementById("erMsg");
-  var ua = navigator.userAgent.toLowerCase();
-  console.log(ua)
-
-  // if (ua.indexOf("iphone") != -1) {
-  //   console.log(ua.indexOf("mozilla"))
-  //   console.log(ua)
-  //
-  //   loadForIphone = `<style type="text/css">
-  //     #video_player { display: none }
-  //   </style>
-  //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
-  //   qtMsg.innerHTML = loadForIphone;
-  // }
-
-function windowsPhone(data) {
-  var iemobile;
-  if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
-   console.log('windows mobile')
-   iemobile = data + `
-    <source src="videoshort/home.mp4" type="video/mp4" />
-    <object type="application/x-shockwave-flash"
-            data="swf/flowplayer-3.2.18.swf" width="100" height="auto">
-        <param name="movie" value="swf/flowplayer-3.2.18.swf" />
-        <param name="allowFullScreen" value="true" />
-        <param name="wmode" value="transparent" />
-        <param name="flashVars"
-               value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />
-        <img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />
-    </object>`;
-  } else {
-    iemobile = data;
-  }
-  return iemobile;
-}
-
-  if (ua.indexOf("iphone") !== -1) {
-    // console.log(ua.indexOf("iphone"))
-    function playVideo(){
-       var video = document.getElementById("video_player");
-      //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
-       webview.allowsInlineMediaPlayback = true;
-       video.play();
-    }
-    playVideo();
-  }
-
-function fallback(video) {
-  var img = video.querySelector('img');
-  if (img)
-    video.parentNode.replaceChild(img, video);
-}
-
-// console.log(ua.indexOf('chrome'))
-  // -1 - not found
-  if (ua.indexOf('safari') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('windows') !== -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
-    if (pluginlist.indexOf("QuickTime") == -1) {
-      var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
-      qtMsg.innerHTML = er;
-    }
-  }
-  </script>
 
   <script src="about0-7.js"></script>
   <script src="js/main0-1.js"></script>
