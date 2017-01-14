@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<panorama xmlns="http://www.immervision.com/panorama">
-  <panoSphere>
-    <image file="testfileForJava.jpg"/>
-  </panoSphere>
-</panorama>
-
