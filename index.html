@@ -25,6 +25,8 @@
   <!-- JS-->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
   <!-- end JS-->
 
 
@@ -73,7 +75,6 @@
     }
   </style>
 
-  <script src="js/jquery.min.js"></script>
   <script src="js/modernizr.js"></script>
   <script>
   	//paste this code under head tag or in a seperate js file.
@@ -143,7 +144,7 @@
                   <div class="theRoute-content" id="theRoute">
                     <span class="close" id="closeMap">&times;</span>
                     <div id="theRoute">
-                      <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png" width="1280px" height="500px">
+                      <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png" width="1280px" height="420px">
                     </div>
                   </div>
               </div>
@@ -155,12 +156,18 @@
     	</section><!-- end content area -->
 
           <section id="columnsdemo" style="width:100%" class="clearfix">
-          <div class="grid_12"><a href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank"><img src="images/logoname.png" usemap="#logos"/></a>
-          <map name="logos">
-    			<area shape="rect" coords="30,25,162,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
-    			<area shape="rect" coords="195,24,253,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
-    			<area shape="rect" coords="288,16,342,70" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" />
-    		</map>
+          <div class="grid_12">
+            <div id="logo">
+              <a href="#" style="outline:none;"><img src="images/logonameAlt_01.png" /></a>
+              <a href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;"><img src="images/logonameAlt_02.png" style="outline:none;" /></a>
+              <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/logonameAlt_03.png" /></a>
+            </div>
+            <!-- <img src="images/logoname.png" usemap="#logos"/> -->
+          <!-- <map name="logos"> -->
+    			<!-- <area shape="rect" coords="30,25,162,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" /> -->
+    			<!-- <area shape="rect" coords="187,0,320,116" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="" title="" alt="" /> -->
+    			<!-- <area shape="rect" coords="288,16,342,70" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" /> -->
+    		<!-- </map> -->
 
           </div>
           </section>
@@ -193,8 +200,8 @@
 
     <!-- fire ups - read this file!  -->
   </body>
-
   <script>
+
   var qtMsg = document.getElementById("erMsg");
   var ua = navigator.userAgent.toLowerCase();
   console.log(ua)
@@ -256,6 +263,7 @@ function fallback(video) {
       qtMsg.innerHTML = er;
     }
   }
+
   </script>
 
   <!-- =================================================================== -->
