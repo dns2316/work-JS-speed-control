@@ -6,7 +6,7 @@
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 
   <title>Home</title>
-  <meta name="description" content="Simple Responsive Template is a template for responsive web design. Mobile first, responsive grid layout, toggle menu, navigation bar with unlimited drop downs, responsive slideshow">
+  <meta name="description" content="Started layout author: noname; fix site author: dns2316">
   <meta name="keywords" content="">
 
   <!-- Mobile viewport -->
@@ -16,8 +16,9 @@
   <link href='css/google.css' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/basic-style0-7.css">
+  <link rel="stylesheet" href="css/basic-style1-5.css">
 
+  <link rel="stylesheet" href="css/splash.css">
   <link rel="stylesheet" href="css/freelance.css">
 
   <!-- end CSS-->
@@ -25,55 +26,10 @@
   <!-- JS-->
   <script src="js/libs/modernizr-2.6.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="js/staticlogo.js"></script> -->
   <!-- end JS-->
 
-
-  <!-- columns demo style. DELETE IT! -->
-  <style type="text/css">
-    <!--
-
-    #columnsdemo .grid_1,
-    #columnsdemo .grid_2,
-    #columnsdemo .grid_3,
-    #columnsdemo .grid_4,
-    #columnsdemo .grid_5,
-    #columnsdemo .grid_6,
-    #columnsdemo .grid_7,
-    #columnsdemo .grid_8,
-    #columnsdemo .grid_9,
-    #columnsdemo .grid_10,
-    #columnsdemo .grid_11,
-    #columnsdemo .grid_12 {
-    color:#999;
-    text-align: center;
-    padding:5px 15px;float:left;
-    }
-    ::-webkit-video-controls {
-      display:none !important;
-    }
-    video-controls {
-      display:none !important;
-    }
-    -->
-  </style>
-  <style>
-    /* Paste this css to your style sheet file or under head tag */
-    /* This only works with JavaScript,
-    if it's not present, don't show loader */
-    .no-js #loader { display: none;  }
-    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
-    .se-pre-con {
-    	position: fixed;
-    	left: 0px;
-    	top: 0px;
-    	width: 100%;
-    	height: 100%;
-    	z-index: 9999;
-    	background: url(images/loading.gif) center no-repeat #fff;
-    }
-  </style>
 
   <script src="js/modernizr.js"></script>
   <script>
@@ -91,10 +47,16 @@
   </script>
 
 
-
   </head>
 
   <body id="home">
+<!-- splash -->
+    <!-- <div class="splash fade-in">
+      <h1 class="splash-title fade-in">SPLASH SCREEN</h1>
+      <a href="#" class="splash-arrow fade-in"><img src="images/down-arrow.png" alt="" /></a>
+    </div> -->
+<!-- end splash -->
+
     <div class="se-pre-con"></div>
     <div id="main" class="wrapper" style="box-shadow: 0px 0px 4px #CCC;">
 
@@ -104,29 +66,29 @@
         <div class="row">
           <div class="grid_12">
             <div class="vdvd" id="erMsg">
+
               <video id="video_player" width="100%" height="auto" autoplay muted loop onplaying="this.controls=false" webkit-playsinline playsinline>
               </video>
-
-    <!--<video id="video" autoplay="autoplay" loop="loop" type="video/mp4" data-muted="false" data-src="vs1s27.mp4" width="100%" height="auto">
-         <!-- <source src="video/home.mp4" type="video/mp4" width="100%" height="auto">
-          <source src="video/home.webm" type="video/webm codecs=codecs=vp8, vorbis" width="100%" height="auto">
-          <source src="video/home.ogg" type="video/ogg codecs=theora, vorbis" width="100%" height="auto">-->
-
-          <!-- Flash fallback -->
-
+              <!-- cover -->
+              <div class="cover">
+                <p class="sep"></p>
+                <h1></h1>
+              </div>
+              <!-- end cover -->
       <!-- </video>-->
 
               <div id="myModal" class="myModal">
-                  <div class="modal-content"><span class="close" id="closeContacts">&times;</span>
-                    <!-- <div id="thanks"><h1><b>Thanks for you message!</b></h1></div> -->
+                  <div class="modal-content"><span class="close" id="closeContacts" onclick="spanClose('myModal');">&times;</span>
                     <form name="mail" action="/js/gdform.php" method="post">
                       <p>
-                        London & SCR Limited<br> 12 Bridge Wharf,<br> Caledonian Road,<br> London N1 9UU, <br> United Kingdom<br>
-                        <a href="mailto:info@LondonSCR.co.uk" style="color:#e22525;text-decoration: none;">Email: info@LondonSCR.co.uk</a>
+                        lorem<br> 12 lorem,<br>lorem,<br> lorem,<br>United Kingdom<br><br>
+                        <span id="contactEmails">
+                          <a href="mailto:info@lorem.com" style="text-decoration: none;">Email: info@lorem.com</a><br>
+                        </span>
                       </p>
                       <br>
                       <input type="hidden" name="subject" value="Form Submission" />
-                      <input type="hidden" name="redirect" value="http://www.londonscr.co.uk/thanks.html" />
+                      <input type="hidden" name="redirect" value="http://www.lorem.com/thanks.html" />
                       <p>First Name:<input type="text" name="FirstName" /></p>
                       <p>Last Name:<input type="text" name="LastName" /></p>
                       <p>E-Mail:<input type="text" name="email" placeholder="email@yahoo.com"/></p>
@@ -142,11 +104,15 @@
 
               <div id="routeModal" class="routeModal">
                   <div class="theRoute-content" id="theRoute">
-                    <span class="close" id="closeMap">&times;</span>
+                    <span class="close" id="closeMap" onclick="spanClose('routeModal');">&times;</span>
                     <div id="theRoute">
                       <img src="images/DIAGRAM_SIMPLE_LANDSCAPE_v6.png" width="1280px" height="420px">
                     </div>
                   </div>
+              </div>
+
+              <div id="newsModal" class="newsModal">
+                <div class="news-content" id="outNews"></div>
               </div>
 
             </div>
@@ -159,91 +125,133 @@
           <div class="grid_12">
             <div id="logo">
               <a href="#" style="outline:none;"><img src="images/logonameAlt_01.png" /></a>
-              <a href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;"><img src="images/logonameAlt_02.png" style="outline:none;" /></a>
-              <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/logonameAlt_03.png" /></a>
+              <a href="http://www.lorem.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;"><img src="images/logonameAlt_02.png" style="outline:none;" /></a>
+              <a href="#" style="outline:none;"><img src="images/logonameAlt_03.png" /></a>
             </div>
-            <!-- <img src="images/logoname.png" usemap="#logos"/> -->
-          <!-- <map name="logos"> -->
-    			<!-- <area shape="rect" coords="30,25,162,67" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" /> -->
-    			<!-- <area shape="rect" coords="187,0,320,116" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="" title="" alt="" /> -->
-    			<!-- <area shape="rect" coords="288,16,342,70" href="http://www.creegc.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;" title="" alt="" /> -->
-    		<!-- </map> -->
-
           </div>
           </section>
 
           <section id="content" class="wide-content">
           <div class="row">
             <div class="grid_12">
-
-    <!-- <img src="images/BottomBanner.png" usemap="#logosbottom"/> -->
               <div id="logosbottomid">
-                <a href="http://www.bml2.co.uk/" target="_blank" style="outline:none;"><img src="images/BottomBannerAltV3_01.png" style="outline:none;" /></a>
-                <a href="#" style="outline:none;"><img src="images/BottomBannerAltV3_02.png" /></a>
-                <a href="#" id="theRouteBtn" style="outline:none;"><img src="images/BottomBannerAltV3_03.png" /></a>
-                <a href="#" id="aboutBtn" style="outline:none;"><img src="images/BottomBannerAltV3_04.png" /></a>
-                <a href="#"id="myBtn" style="outline:none;"><img src="images/BottomBannerAltV3_05.png" /></a>
-                <!-- <map name="logosbottom"> -->
-            			<!-- <area shape="rect" style="top: 42px; left: 31px; width: 175px; height: 80px; display:block; position: absolute;" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
-                  <!-- <area shape="rect" coords="805,41,1085,62" href="mailto:info%40londonscr.co.uk?subject=website&body=" id="myBtn" title="" alt="" /> -->
-            			<!-- <area shape="rect" style="top: 1015px; left: 39px; width: 175px; height: 80px; display:block; position: absolute;" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
-                  <!-- <area shape="rect" style="top: 860px; left: 37px; width: 175px; height: 80px; display:block; position: absolute;" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
-
-                  <!-- <area shape="rect" coords="42,37,175,86" href="http://www.bml2.co.uk/" style="outline:none;" target="_blank" title="" alt="" /> -->
-                  <!-- <area shape="rect" coords="991,30,1124,79" href="#" id="myBtn" style="outline:none;" title="" alt="" /> -->
-                  <!-- <area shape="rect" coords="817,31,950,80" href="#" id="aboutBtn" style="outline:none;" title="" alt="" /> -->
-            		<!-- </map> -->
+                <a href="#"style="outline:none;cursor: default;"><img src="images/BottomBannerAltV5_01.png" /></a>
+                <a href="#" style="outline:none;cursor: default;"><img src="images/BottomBannerAltV5_02.png" /></a>
+                <a href="#" id="News" onclick="toggle_visibilityNews('newsModal');" style="outline:none;"><img src="images/BottomBannerAltV5_03.png" /></a>
+                <a href="#" id="theRouteBtn" onclick="toggle_visibilityRoute('routeModal');" style="outline:none;"><img src="images/BottomBannerAltV5_04.png" /></a>
+                <a href="#" id="aboutBtn" onclick="toggle_visibility('aboutModal');" style="outline:none;"><img src="images/BottomBannerAltV5_05.png" /></a>
+                <a href="#" id="myBtn" onclick="toggle_visibility('myModal');" style="outline:none;"><img src="images/BottomBannerAltV5_06.png" /></a>
              </div>
            </div>
           </div>
           </section>
-
-    <!-- fire ups - read this file!  -->
+        </div>
   </body>
   <script>
+// menu
+function spanClose(id){
+  var e = document.getElementById(id);
+  e.style.display = 'none';
+}
+
+var routeModal = document.getElementById("routeModal");
+var contactModal = document.getElementById("myModal");
+var aboutModal = document.getElementById("aboutModal");
+var newsModal = document.getElementById("newsModal");
+var coverMain = document.getElementsByClassName("cover");
+// var coverOff = document.getElementByClassName("cover");
+
+function toggle_visibility(id) {
+   var e = document.getElementById(id);
+   if(e.style.display == 'block')
+      e.style.display = 'none';
+   else
+      e.style.display = 'block';
+      routeModal.style.display = 'none';
+      newsModal.style.display = 'none';
+      // coverMain.style.display = 'none !important';
+}
+
+function toggle_visibilityRoute(id) {
+  var e = document.getElementById(id);
+  if(e.style.display == 'block')
+     e.style.display = 'none';
+  else
+     e.style.display = 'block';
+     contactModal.style.display = 'none';
+     aboutModal.style.display = 'none';
+     newsModal.style.display = 'none';
+    //  coverMain.style.display = 'none !important';
+
+}
+
+function toggle_visibilityNews(id) {
+  var e = document.getElementById(id);
+  if(e.style.display == 'block')
+     e.style.display = 'none';
+  else
+     e.style.display = 'block';
+     contactModal.style.display = 'none';
+     aboutModal.style.display = 'none';
+     routeModal.style.display = 'none';
+    //  coverMain.style.display = 'none !important';
+
+}
+
+$("#News").click(
+  function (e) {
+    $('.cover').toggleClass('coverHide')
+  }
+)
+$("#theRouteBtn").click(
+  function (e) {
+    $('.cover').toggleClass('coverHide')
+  }
+)
+$("#aboutBtn").click(
+  function (e) {
+    $('.cover').toggleClass('coverHide')
+  }
+)
+$("#myBtn").click(
+  function (e) {
+    $('.cover').toggleClass('coverHide')
+  }
+)
+$(".close").click(
+  function (e) {
+    $('.cover').toggleClass('coverHide')
+  }
+)
+// end menu
+
+// js hover splash
+console.log(newsModal.style.display)
+if (
+  newsModal.style.display == 'none' &&
+  contactModal.style.display == 'none' &&
+  aboutModal.style.display == 'none' &&
+  routeModal.style.display == 'none'
+) {
+  $(".vdvd").mouseover(function(){
+    $(".cover").fadeIn();
+  });
+  $(".vdvd").mouseleave(function(){
+    $(".cover").fadeOut();
+  });
+}
+
+// end hover splash
 
   var qtMsg = document.getElementById("erMsg");
   var ua = navigator.userAgent.toLowerCase();
   console.log(ua)
 
-  // if (ua.indexOf("iphone") != -1) {
-  //   console.log(ua.indexOf("mozilla"))
-  //   console.log(ua)
-  //
-  //   loadForIphone = `<style type="text/css">
-  //     #video_player { display: none }
-  //   </style>
-  //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
-  //   qtMsg.innerHTML = loadForIphone;
-  // }
-
-function windowsPhone(data) {
-  var iemobile;
-  if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
-    console.log('windows mobile')
-    iemobile = data;
-    iemobile = iemobile + '<source src="videoshort/home.mp4" type="video/mp4" />';
-    iemobile = iemobile + '<object type="application/x-shockwave-flash"';
-    iemobile = iemobile + 'data="swf/flowplayer-3.2.18.swf" width="100" height="auto">';
-    iemobile = iemobile + '<param name="movie" value="swf/flowplayer-3.2.18.swf" />';
-    iemobile = iemobile + '<param name="allowFullscreen" value="true" />';
-    iemobile = iemobile + '<param name="wmode" value="transparent" />';
-    iemobile = iemobile + '<param name="flashVars"';
-    // iemobile = iemobile + value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />;
-    // iemobile = iemobile + '<img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />';
-    iemobile = iemobile + '</object>';
-  } else {
-    iemobile = data;
-  }
-  return iemobile;
-}
-
   if (ua.indexOf("iphone") !== -1) {
     // console.log(ua.indexOf("iphone"))
     function playVideo(){
        var video = document.getElementById("video_player");
-      //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
-       webview.allowsInlineMediaPlayback = true;
+       webview.allowsInlinemiddleiaPlayback = true;
        video.play();
     }
     playVideo();
@@ -254,9 +262,6 @@ function fallback(video) {
   if (img)
     video.parentNode.replaceChild(img, video);
 }
-
-// console.log(ua.indexOf('chrome'))
-  // -1 - not found
   if (ua.indexOf('safari') !== -1 && ua.indexOf('windows') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
@@ -269,8 +274,29 @@ function fallback(video) {
   <!-- =================================================================== -->
 
   <script type="text/javascript">
-    var imageAddr = "http://www.londonscr.co.uk/images/logoname.png";
-    var downloadSize = 39443; //bytes
+
+  var ua = navigator.userAgent.toLowerCase();
+  function windowsPhone(data) {
+    var iemobile;
+    if (ua.indexOf("lumia") !== -1 || ua.indexOf("iemobile") !== -1) {
+      console.log('windows mobile')
+      iemobile = data;
+      iemobile = iemobile + '<source src="videoshort/home.mp4" type="video/mp4" />';
+      iemobile = iemobile + '<object type="application/x-shockwave-flash"';
+      iemobile = iemobile + 'data="swf/flowplayer-3.2.18.swf" width="100" height="auto">';
+      iemobile = iemobile + '<param name="movie" value="swf/flowplayer-3.2.18.swf" />';
+      iemobile = iemobile + '<param name="allowFullscreen" value="true" />';
+      iemobile = iemobile + '<param name="wmode" value="transparent" />';
+      iemobile = iemobile + '<param name="flashVars"';
+      iemobile = iemobile + '</object>';
+    } else {
+      iemobile = data;
+    }
+    return iemobile;
+  }
+
+    var imageAddr = "http://www.lorem.co.uk/images/logoname.png";
+    var downloadSize = 39443;
 
     function ShowProgressMessage(msg) {
       if (console) {
@@ -284,26 +310,31 @@ function fallback(video) {
       }
 
       var oProgress = document.getElementById("video_player");
-      var speedForHQ = 0.9; // speed in Mbps
+      var speedForHQ = 0.9;
+      var speedForMQ = 0.5;
+      var curSpeed = Number(msg[0]);
       if (oProgress) {
 
         var actualHTML;
-        if (parseInt(msg[0]) > speedForHQ) {
-          actualHTML = '<img src="videolong/lscr_large.gif"><source src="videolong/lscr-fix.mp4" type="video/mp4"><source src="videolong/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/lscr.mov" type="video/quicktime" preload="metadata"><source src="videolong/lscr.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.'; // video on Hide Q
-          // actualHTML = actualHTML + '<object><embed src=videolong/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
+        if (curSpeed > speedForHQ) {
+           // video HQ
+          actualHTML = '<img src="videolong/HQ.gif"><source src="videolong/HQ.mp4" type="video/mp4"><source src="videolong/HQ.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/HQ.mp4" type="video/mp4" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/HQ.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata"><source src="videolong/HQ.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videolong/HQ.mov" type="video/quicktime" preload="metadata"><source src="videolong/HQ.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.';
           actualHTML = windowsPhone(actualHTML);
         } else {
-          actualHTML = '<img src="videoshort/lscr_small.gif"><source src="videoshort/lscr-fix.mp4" type="video/mp4"><source src="videoshort/lscr.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mp4" type="video/mp4" preload="metadata"><source src="videoshort/lscr.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/lscr.mov" type="video/quicktime" preload="metadata"><source src="videoshort/lscr.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.'; // video in Low Q
-          // actualHTML = actualHTML + '<object><embed src=videoshort/lscr.mp4″ type= “application/x-shockwave-flash” allowfullscreen=”true” allowscriptaccess=”always” /></object>';
-          actualHTML = windowsPhone(actualHTML);
+          if (curSpeed > speedForMQ) {
+             // video MQ
+            actualHTML = '<img src="videomiddle/MQ.gif"><source src="videomiddle/MQ.mp4" type="video/mp4"><source src="videomiddle/MQ.mp4" type="video/mp4 codecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videomiddle/MQ.mp4" type="video/mp4" preload="metadata"><source src="videomiddle/MQ.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videomiddle/MQ.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videomiddle/MQ.mov" type="video/quicktime" preload="metadata"><source src="videomiddle/MQ.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.';
+          } else {
+             // video LQ
+            actualHTML = '<img src="videoshort/LQ.gif"><source src="videoshort/LQ.mp4" type="video/mp4"><source src="videoshort/LQ.mp4" type="video/mp4 caodecs=H.264, libx264, avc1.4D401E, mp4a.40.2" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/LQ.mp4" type="video/mp4" preload="metadata"><source src="videoshort/LQ.ogg" type="video/ogg codecs=theora, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/LQ.webm" type="video/webm codecs=codecs=vp8, vorbis" preload="metadata" onerror="fallback(parentNode)"><source src="videoshort/LQ.mov" type="video/quicktime" preload="metadata"><source src="videoshort/LQ.mov" type="video/mov" preload="metadata">Your browser doesnt support the HTML5 video element.';
+            actualHTML = windowsPhone(actualHTML);
+          }
         }
-          // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
       }
     }
 
     function InitiateSpeedDetection() {
-      // ShowProgressMessage("Loading the video, please wait...");
       window.setTimeout(MeasureConnectionSpeed, 1);
     };
 
@@ -338,6 +369,7 @@ function fallback(video) {
           ShowProgressMessage([
               speedMbps
           ]);
+          return speedMbps;
       }
     }
   </script>
@@ -345,8 +377,7 @@ function fallback(video) {
 
   <!-- =================================================================== -->
 
-  <script src="about0-7.js"></script>
-  <script src="js/main0-1.js"></script>
-  <?php include_once "js/gdform.php"; ?>
-
+  <script src="about0-9.js"></script>
+  <script src="news0-3.js"></script>
+  <!-- <script src="js/main.js"></script> -->
 </html>
