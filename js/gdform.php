@@ -1,6 +1,6 @@
 <?php
 	// VALUES FROM THE FORM
-	$name = $_POST['FirstName'] . ' ' . $_POST['LastName'];
+	$name = $_POST['FirstName'] . '  ' . $_POST['LastName'];
 	$email = $_POST['email'];
 	$message = $_POST['msg'];
 
@@ -40,17 +40,22 @@
 		exit;
 	}
 
+ini_set('date.timezone', 'Europe/London');
 
 	// CREATE THE EMAIL
-	$recipient	= "christopher.lucas@londonscr.co.uk";
-	$headers	= "Content-Type: text/html; charset=utf-8\nFrom: London & SCR Limited" ." <".$recipient.">" . "\r\n" . "Reply-To: " . $email . "\r\n" . "Cc: " ."<jao914@yandex.com>, <clucas2174@gmail.com>, ".$email."\r\n";
-	$subject	= "Contact From londonscr.co.uk";
-	$sendMessage = wordwrap($message, 1024);
-
-	ini_set('sendmail_from', 'christopher.lucas@londonscr.co.uk');
+	$recipient	= "info@lorem.com";
+ 	$headers	= "Content-Type: text/plain; Content-Transfer-Encoding: quoted-printable; charset=utf-8\nFrom: HS lorem" ." <".$recipient.">" . "\r\n" . "Reply-To: ".$email;
+	$subject	= "HS lorem. Contact From ".$email;
+	$subjectCopy	= "Contact From ".$email.". Copy message";
+	$sendMessage = "This is to confirm that H S lorem have received the following message from you.\r\n\r\nYour name: ".$name."\r\n\r\nYour message:\r\n\r\n";
+	$sendMessage .= wordwrap($message, 1024);
+	$sendMessage .= "\r\n\r\n\r\n".date('H:i', time() - date('Z'))."\r\n\r\nThankyou";
+	$to = $recipient.", ".$email;
+	ini_set('sendmail_from', 'info@lorem.com');
 
 	// SEND THE EMAIL
-	mail($recipient, $subject, $sendMessage, $headers);
+	mail($to, $subject, $sendMessage, $headers);
+
 	// REDIRECT TO THE THANKS PAGE
-	header('Location:http://www.londonscr.co.uk/thanks.html');
+	header('Location:http://lorem.com/thanks.html');
 ?>
