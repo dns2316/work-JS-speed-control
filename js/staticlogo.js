@@ -6,7 +6,7 @@
 var ddsitelogo={
 	setting: {orientation:1, visibleduration:0, fadeduration:[1000, 500]}, //orientation=1|2|3|4, duration=millisec or 0, fadedurations=millisecs
 	offsets: {x:10, y:10},//offset of logo relative to window corner
-	logoHTML: '<a href="http://www.newsussexrail.com" title="Dynamic Drive"><img src="images/about1.png" style="width:70px; height:47px; border:0" /></a>', //HTML for logo, which is auto wrapped in DIV w/ ID="mysitelogo"
+	logoHTML: '<a href="#" title=""><img src="images/about1.png" style="width:70px; height:47px; border:0" /></a>', //HTML for logo, which is auto wrapped in DIV w/ ID="mysitelogo"
 
 	coord: {},
 

@@ -6,7 +6,7 @@
   <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 
   <title>Home</title>
-  <meta name="description" content="Started layout author: noname; fix site author: dns2316">
+  <meta name="description" content="Simple Responsive Template is a template for responsive web design. Mobile first, responsive grid layout, toggle menu, navigation bar with unlimited drop downs, responsive slideshow">
   <meta name="keywords" content="">
 
   <!-- Mobile viewport -->
@@ -28,6 +28,7 @@
   <script src="js/plugins.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="js/staticlogo.js"></script> -->
+  <script src="js/galleria-1.5.1.min.js"></script>
   <!-- end JS-->
 
 
@@ -50,11 +51,17 @@
   </head>
 
   <body id="home">
+  <div id="mysitelogo">
+    <a href="https://dns2316.github.io/work-JS-speed-control/gallery" title=""><img src="images/about1.png" style="width:70px; height:47px; border:0" /></a>
+  </div>
 <!-- splash -->
-    <!-- <div class="splash fade-in">
-      <h1 class="splash-title fade-in">SPLASH SCREEN</h1>
-      <a href="#" class="splash-arrow fade-in"><img src="images/down-arrow.png" alt="" /></a>
+  <!-- <div class="galleriaSplash galleriaHide"> -->
+    <!-- <div class="galleria">
+        <img src="portfolio_images/splash-1.jpg">
+        <img src="portfolio_images/splash-3.jpg">
+        <img src="portfolio_images/splash-bg.jpg">
     </div> -->
+  <!-- </div> -->
 <!-- end splash -->
 
     <div class="se-pre-con"></div>
@@ -79,16 +86,18 @@
 
               <div id="myModal" class="myModal">
                   <div class="modal-content"><span class="close" id="closeContacts" onclick="spanClose('myModal');">&times;</span>
+                    <!-- <div id="thanks"><h1><b>Thanks for you message!</b></h1></div> -->
                     <form name="mail" action="/js/gdform.php" method="post">
                       <p>
-                        lorem<br> 12 lorem,<br>lorem,<br> lorem,<br>United Kingdom<br><br>
+                        lorem UK LTD<br> 12 lorem,<br>lorem,<br> London lorem,<br>United Kingdom<br><br>
                         <span id="contactEmails">
                           <a href="mailto:info@lorem.com" style="text-decoration: none;">Email: info@lorem.com</a><br>
+                          <!-- <a href="mailto:joshua.grimstone@westbournecoms.com" style="color:#e22525;text-decoration: none;">Media Enquiries: joshua.grimstone@westbournecoms.com</a> -->
                         </span>
                       </p>
                       <br>
                       <input type="hidden" name="subject" value="Form Submission" />
-                      <input type="hidden" name="redirect" value="http://www.lorem.com/thanks.html" />
+                      <input type="hidden" name="redirect" value="https://dns2316.github.io/work-JS-speed-control/thanks.html" />
                       <p>First Name:<input type="text" name="FirstName" /></p>
                       <p>Last Name:<input type="text" name="LastName" /></p>
                       <p>E-Mail:<input type="text" name="email" placeholder="email@yahoo.com"/></p>
@@ -128,12 +137,15 @@
               <a href="http://www.lorem.com/en/tabid/173/Default.aspx" target="_blank" style="outline:none;"><img src="images/logonameAlt_02.png" style="outline:none;" /></a>
               <a href="#" style="outline:none;"><img src="images/logonameAlt_03.png" /></a>
             </div>
+
           </div>
           </section>
 
           <section id="content" class="wide-content">
           <div class="row">
             <div class="grid_12">
+
+    <!-- <img src="images/BottomBanner.png" usemap="#logosbottom"/> -->
               <div id="logosbottomid">
                 <a href="#"style="outline:none;cursor: default;"><img src="images/BottomBannerAltV5_01.png" /></a>
                 <a href="#" style="outline:none;cursor: default;"><img src="images/BottomBannerAltV5_02.png" /></a>
@@ -146,6 +158,7 @@
           </div>
           </section>
         </div>
+    <!-- fire ups - read this file!  -->
   </body>
   <script>
 // menu
@@ -198,6 +211,7 @@ function toggle_visibilityNews(id) {
 
 }
 
+// $("#News" || "#theRouteBtn" || "#aboutBtn" || "#myBtn").click(
 $("#News").click(
   function (e) {
     $('.cover').toggleClass('coverHide')
@@ -247,10 +261,22 @@ if (
   var ua = navigator.userAgent.toLowerCase();
   console.log(ua)
 
+  // if (ua.indexOf("iphone") != -1) {
+  //   console.log(ua.indexOf("mozilla"))
+  //   console.log(ua)
+  //
+  //   loadForIphone = `<style type="text/css">
+  //     #video_player { display: none }
+  //   </style>
+  //   <img src="videoshort/iPhone2.gif" alt="" height="100%" width="100%">`;
+  //   qtMsg.innerHTML = loadForIphone;
+  // }
+
   if (ua.indexOf("iphone") !== -1) {
     // console.log(ua.indexOf("iphone"))
     function playVideo(){
        var video = document.getElementById("video_player");
+      //  video.setAttribute('webkit-playsinline', 'webkit-playsinline');
        webview.allowsInlinemiddleiaPlayback = true;
        video.play();
     }
@@ -262,6 +288,9 @@ function fallback(video) {
   if (img)
     video.parentNode.replaceChild(img, video);
 }
+
+// console.log(ua.indexOf('chrome'))
+  // -1 - not found
   if (ua.indexOf('safari') !== -1 && ua.indexOf('windows') !== -1 && ua.indexOf('chrome') == -1 && ua.indexOf('silk') == -1 && ua.indexOf('ipad') == -1 && ua.indexOf('mobile') == -1) {
     if (pluginlist.indexOf("QuickTime") == -1) {
       var er = '<a id="errorMsg" href="https://www.apple.com/ru/quicktime/" target="_blank" style="margin: 25% 25%">You cannot see the video because you do not have QuickTime installed!</a></br><a id="errorMsg" href="https://support.apple.com/kb/DL837?locale=en_US" target="_blank" style="margin: 15% 30%">Click here to download QuickTime for Windows!</a>';
@@ -288,6 +317,8 @@ function fallback(video) {
       iemobile = iemobile + '<param name="allowFullscreen" value="true" />';
       iemobile = iemobile + '<param name="wmode" value="transparent" />';
       iemobile = iemobile + '<param name="flashVars"';
+      // iemobile = iemobile + value="config={'playlist':['..%2Fimages%2Fdemo.jpg',{'url':'..%2Fvideoshort%2Fhome%2Fhome.mp4','autoPlay':true}]}" />;
+      // iemobile = iemobile + '<img src="images/demo.jpg" width="100%" height="auto" title="No Flash found" />';
       iemobile = iemobile + '</object>';
     } else {
       iemobile = data;
@@ -295,8 +326,8 @@ function fallback(video) {
     return iemobile;
   }
 
-    var imageAddr = "http://www.lorem.co.uk/images/logoname.png";
-    var downloadSize = 39443;
+    var imageAddr = "http://www.londonscr.co.uk/images/logoname.png";
+    var downloadSize = 39443; //bytes
 
     function ShowProgressMessage(msg) {
       if (console) {
@@ -310,7 +341,7 @@ function fallback(video) {
       }
 
       var oProgress = document.getElementById("video_player");
-      var speedForHQ = 0.9;
+      var speedForHQ = 0.9; // speed in Mbps
       var speedForMQ = 0.5;
       var curSpeed = Number(msg[0]);
       if (oProgress) {
@@ -330,11 +361,13 @@ function fallback(video) {
             actualHTML = windowsPhone(actualHTML);
           }
         }
+          // var actualHTML = (typeof msg == "string") ? msg : msg.join("<br />");
           oProgress.innerHTML = actualHTML;
       }
     }
 
     function InitiateSpeedDetection() {
+      // ShowProgressMessage("Loading the video, please wait...");
       window.setTimeout(MeasureConnectionSpeed, 1);
     };
 
@@ -379,5 +412,7 @@ function fallback(video) {
 
   <script src="about0-9.js"></script>
   <script src="news0-3.js"></script>
-  <!-- <script src="js/main.js"></script> -->
+  <script src="js/main.js"></script>
+  <?php include_once "js/gdform.php"; ?>
+
 </html>
